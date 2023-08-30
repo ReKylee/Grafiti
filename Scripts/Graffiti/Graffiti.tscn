@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxr4b3o8yvpap"]
+
+[ext_resource type="Script" path="res://Scripts/Graffiti/Graffiti.gd" id="1_xnquk"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="2_b370i"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_2sdrv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cq4wu"]
+size = Vector3(1.5, 3, 3)
+
+[sub_resource type="Resource" id="Resource_swtl5"]
+script = ExtResource("3_2sdrv")
+duration = 0.1
+transition = 0
+ease = 2
+
+[node name="Graffiti" type="Area3D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_xnquk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_cq4wu")
+
+[node name="PhantomCamera3D" type="Node3D" parent="."]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -3.8586, 0, 9.53674e-07)
+script = ExtResource("2_b370i")
+priority = 0
+follow_mode = 0
+look_at_mode = 0
+tween_parameters = SubResource("Resource_swtl5")
+tween_on_load = true
+inactive_update_mode = 0
+
+[node name="GraffitiTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="PlayerPosition" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.33712, -0.173075, -1.21803)
+
+[node name="GraffitiSprite" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.7, 0, 0)
+double_sided = false

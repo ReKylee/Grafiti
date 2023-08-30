@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://cnwce88rxk0x6"]
+
+[ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="1_7txjt"]
+[ext_resource type="Script" path="res://Scripts/Player/abilities/walk_ability_3d.gd" id="2_idnyf"]
+[ext_resource type="Script" path="res://Scripts/Player/CameraController.gd" id="2_qjmih"]
+[ext_resource type="PackedScene" uid="uid://bk80nnkngy1m4" path="res://froggo_base.tscn" id="3_1pewv"]
+[ext_resource type="Script" path="res://addons/draw3d/draw_3d.gd" id="3_2qu0c"]
+[ext_resource type="Script" path="res://Scripts/Player/abilities/sprint_ability_3d.gd" id="3_pcx4q"]
+[ext_resource type="Script" path="res://Scripts/Player/abilities/jump_ability_3d.gd" id="4_lqbsn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wstnw"]
+radius = 1.7
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xyrwc"]
+radius = 0.469919
+height = 3.31051
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_jr0cm"]
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_7txjt")
+gravity_multiplier = 2.0
+speed = 12
+air_control = 0.5
+jump_height = 20
+abilities_path = Array[NodePath]([NodePath("WalkAbility3D"), NodePath("SprintAbility3D"), NodePath("JumpAbility3D")])
+
+[node name="WalkAbility3D" type="Node3D" parent="."]
+script = ExtResource("2_idnyf")
+_active = true
+
+[node name="SprintAbility3D" type="Node3D" parent="."]
+script = ExtResource("3_pcx4q")
+
+[node name="JumpAbility3D" type="Node3D" parent="."]
+script = ExtResource("4_lqbsn")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="InteractionColShape" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("SphereShape3D_wstnw")
+
+[node name="PlayerColShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+shape = SubResource("CapsuleShape3D_xyrwc")
+
+[node name="CameraAnchor" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0, 0)
+spring_length = 8.0
+script = ExtResource("2_qjmih")
+
+[node name="CameraPos" type="Marker3D" parent="CameraAnchor"]
+
+[node name="Froggo" parent="." instance=ExtResource("3_1pewv")]
+
+[node name="Head Check" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+target_position = Vector3(0, 1, 0)
+
+[node name="Draw3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("ImmediateMesh_jr0cm")
+script = ExtResource("3_2qu0c")
+
+[connection signal="jumped" from="." to="Froggo" method="_on_player_jumped"]
+[connection signal="landed" from="." to="Froggo" method="_on_player_landed"]

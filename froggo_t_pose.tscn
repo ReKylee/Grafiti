@@ -1,0 +1,235 @@
+[gd_scene load_steps=17 format=3 uid="uid://dek3a7pa4ms1h"]
+
+[ext_resource type="PackedScene" uid="uid://bby0cdk8gwfjy" path="res://Assets/Player/FroggoTPose.fbx" id="1_3lsvv"]
+[ext_resource type="Script" path="res://Scripts/Player/PlayerModelController.gd" id="2_i1w7e"]
+[ext_resource type="AnimationLibrary" uid="uid://nu3v5utsk8vo" path="res://Assets/Player/Animations/Movement.res" id="2_nhsvr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_skny7"]
+size = Vector3(0.017, 0.0207954, 0.01237)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ailmk"]
+radius = 0.00267629
+height = 0.0281481
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mlcqi"]
+radius = 0.00267629
+height = 0.0348324
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vfxvb"]
+radius = 0.00224185
+height = 0.0181074
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ifw8"]
+size = Vector3(0.0200705, 0.01524, 0.019104)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6b5bs"]
+radius = 0.0122006
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5644c"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0cmrg"]
+animation = &"Movement/Idle"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_msh30"]
+sync = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sc733"]
+animation = &"Movement/Ball"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3yg4a"]
+animation = &"Movement/Sprint"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_l6mxh"]
+filter_enabled = true
+filters = ["RootNode/Armature", "RootNode/Armature/Skeleton3D:Eye.L", "RootNode/Armature/Skeleton3D:Eye.L_end", "RootNode/Armature/Skeleton3D:Eye.R", "RootNode/Armature/Skeleton3D:Eye.R_end", "RootNode/Armature/Skeleton3D:Finger1.L", "RootNode/Armature/Skeleton3D:Finger1.L_end", "RootNode/Armature/Skeleton3D:Finger1.R", "RootNode/Armature/Skeleton3D:Finger1.R_end", "RootNode/Armature/Skeleton3D:Finger2.L", "RootNode/Armature/Skeleton3D:Finger2.L_end", "RootNode/Armature/Skeleton3D:Finger2.R", "RootNode/Armature/Skeleton3D:Finger2.R_end", "RootNode/Armature/Skeleton3D:Finger3.L", "RootNode/Armature/Skeleton3D:Finger3.L_end", "RootNode/Armature/Skeleton3D:Finger3.R", "RootNode/Armature/Skeleton3D:Finger3.R_end", "RootNode/Armature/Skeleton3D:Head1", "RootNode/Armature/Skeleton3D:LowerArm.L", "RootNode/Armature/Skeleton3D:LowerArm.R", "RootNode/Armature/Skeleton3D:LowerLeg.L", "RootNode/Armature/Skeleton3D:LowerLeg.R", "RootNode/Armature/Skeleton3D:Middle", "RootNode/Armature/Skeleton3D:Neck", "RootNode/Armature/Skeleton3D:Palm.L", "RootNode/Armature/Skeleton3D:Palm.R", "RootNode/Armature/Skeleton3D:Sole.L", "RootNode/Armature/Skeleton3D:Sole.R", "RootNode/Armature/Skeleton3D:Toes.L", "RootNode/Armature/Skeleton3D:Toes.L_end", "RootNode/Armature/Skeleton3D:Toes.R", "RootNode/Armature/Skeleton3D:Toes.R_end", "RootNode/Armature/Skeleton3D:Torso1", "RootNode/Armature/Skeleton3D:UpperArm.L", "RootNode/Armature/Skeleton3D:UpperArm.R", "RootNode/Armature/Skeleton3D:UpperLeg.L", "RootNode/Armature/Skeleton3D:UpperLeg.R"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_5fkgu"]
+graph_offset = Vector2(-184, -16)
+nodes/Idle/node = SubResource("AnimationNodeAnimation_0cmrg")
+nodes/Idle/position = Vector2(-280, 0)
+nodes/IdleRunBlend/node = SubResource("AnimationNodeBlend2_msh30")
+nodes/IdleRunBlend/position = Vector2(0, 40)
+nodes/Jump/node = SubResource("AnimationNodeAnimation_sc733")
+nodes/Jump/position = Vector2(140, 220)
+nodes/Sprint/node = SubResource("AnimationNodeAnimation_3yg4a")
+nodes/Sprint/position = Vector2(-280, 160)
+nodes/ToJumpBlend/node = SubResource("AnimationNodeBlend2_l6mxh")
+nodes/ToJumpBlend/position = Vector2(400, 100)
+nodes/output/position = Vector2(760, 80)
+node_connections = [&"output", 0, &"ToJumpBlend", &"IdleRunBlend", 0, &"Idle", &"IdleRunBlend", 1, &"Sprint", &"ToJumpBlend", 0, &"IdleRunBlend", &"ToJumpBlend", 1, &"Jump"]
+
+[node name="Froggo" instance=ExtResource("1_3lsvv")]
+script = ExtResource("2_i1w7e")
+
+[node name="Armature" parent="RootNode" index="0"]
+transform = Transform3D(29.8487, -2.96847, -0.492094, 0.434376, -0.603933, 29.9906, -2.97746, -29.8467, -0.557903, -0.107069, 1.99089, -0.0106165)
+
+[node name="Skeleton3D" parent="RootNode/Armature" index="0"]
+bones/0/rotation = Quaternion(0.000474975, 0.000474975, 0.000474975, 0.000474975)
+bones/1/rotation = Quaternion(-0.0231922, 0.000675593, -0.00636821, 0.999711)
+bones/2/rotation = Quaternion(-0.0454168, 0.00180178, -0.012819, 0.998884)
+bones/2/scale = Vector3(0.999999, 0.999999, 1)
+bones/3/rotation = Quaternion(0.122569, 0.0712943, -0.984837, 0.0999488)
+bones/3/scale = Vector3(1, 0.999999, 1)
+bones/4/position = Vector3(-8.44463e-09, 0.0194961, 1.63508e-08)
+bones/4/rotation = Quaternion(0.0630286, -0.00410602, -0.000169514, 0.998003)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/position = Vector3(0.000183172, 0.0174077, 0.0002444)
+bones/5/rotation = Quaternion(0.1327, -0.680915, -0.152585, 0.703892)
+bones/5/scale = Vector3(1, 0.999999, 1)
+bones/6/rotation = Quaternion(-0.178178, -0.0375881, 0.2151, 0.959464)
+bones/6/scale = Vector3(1, 0.999999, 1)
+bones/8/rotation = Quaternion(-0.0391006, 0.0535568, -0.0886946, 0.993849)
+bones/8/scale = Vector3(1, 0.999999, 1)
+bones/10/rotation = Quaternion(-0.200659, -0.0491739, 0.162689, 0.964806)
+bones/10/scale = Vector3(1, 0.999999, 1)
+bones/12/rotation = Quaternion(-0.0602758, -0.06377, 0.993161, 0.0770203)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/rotation = Quaternion(0.12725, 0.00408074, 0.000342361, 0.991862)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/rotation = Quaternion(0.197848, 0.597346, 0.227017, 0.743302)
+bones/14/scale = Vector3(1, 0.999999, 1)
+bones/15/rotation = Quaternion(-0.233752, 0.0595829, -0.173133, 0.954901)
+bones/15/scale = Vector3(1, 1, 1)
+bones/17/rotation = Quaternion(-0.101266, -0.0356566, 0.059664, 0.992428)
+bones/17/scale = Vector3(1, 1, 1)
+bones/19/rotation = Quaternion(-0.130148, 0.0321549, -0.137402, 0.981401)
+bones/19/scale = Vector3(1, 1, 1)
+bones/21/rotation = Quaternion(0.110031, -0.000710697, -0.00299576, 0.993923)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/rotation = Quaternion(-0.134315, -0.000710654, -0.00299579, 0.990934)
+bones/22/scale = Vector3(1, 1, 1)
+bones/23/rotation = Quaternion(0.707107, -3.45607e-07, -3.45607e-07, 0.707107)
+bones/25/rotation = Quaternion(0.6984, -0.00240318, -0.0019233, 0.715701)
+bones/27/rotation = Quaternion(0.738255, 0.0416558, 0.672733, -0.0259852)
+bones/27/scale = Vector3(1, 1, 1)
+bones/28/position = Vector3(-1.83287e-05, 0.0287264, -1.00565e-06)
+bones/28/rotation = Quaternion(-0.00755474, -0.00133618, 0.0830344, 0.996517)
+bones/28/scale = Vector3(1, 1, 1)
+bones/29/rotation = Quaternion(-0.00503763, -0.0456467, -0.677634, 0.733964)
+bones/30/rotation = Quaternion(0.0174971, 0.00104529, -0.294557, 0.955473)
+bones/32/rotation = Quaternion(-0.748743, 0.0290691, 0.661366, 0.0336677)
+bones/32/scale = Vector3(1, 1, 1)
+bones/33/rotation = Quaternion(-0.00810156, 0.0727604, -0.0983594, 0.992454)
+bones/33/scale = Vector3(1, 1, 1)
+bones/34/rotation = Quaternion(0.00624145, 0.0337194, 0.69245, 0.72065)
+bones/35/rotation = Quaternion(0.017755, -0.00614071, 0.311964, 0.949908)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="RootNode/Armature/Skeleton3D/Pelvis" index="0"]
+transform = Transform3D(7.45058e-09, 9.31323e-10, 1, 1, -3.72529e-09, -7.45058e-09, 1.86265e-09, 1, 4.65661e-10, 0, 0, 0)
+bone_name = "Pelvis1"
+bone_idx = 0
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="PelvisCol" type="CollisionShape3D" parent="RootNode/Armature/Skeleton3D/Pelvis/BoneAttachment3D" index="0"]
+transform = Transform3D(1, -7.45058e-09, 3.72529e-09, -1.97906e-09, 0.215264, 0.976556, 7.45058e-09, -0.976556, 0.215264, 0, 0.00183279, -3.49246e-10)
+shape = SubResource("BoxShape3D_skny7")
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="RootNode/Armature/Skeleton3D/L Upper Leg" index="0"]
+transform = Transform3D(0.995461, 0.017679, -0.0935108, 0.0913907, 0.0964673, 0.991132, 0.0265429, -0.995179, 0.0944138, 0.0004, 0.0066, -0.000699989)
+bone_name = "UpperLeg.L"
+bone_idx = 27
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="L UpperLegCol" type="CollisionShape3D" parent="RootNode/Armature/Skeleton3D/L Upper Leg/BoneAttachment3D" index="0"]
+transform = Transform3D(0.999999, 1.49012e-07, -5.21541e-08, 0, 1, 4.47035e-08, 5.58794e-08, -5.96046e-08, 1, -7.45058e-09, 0.011238, -9.31323e-10)
+shape = SubResource("CapsuleShape3D_ailmk")
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="RootNode/Armature/Skeleton3D/L Lower Leg" index="0"]
+transform = Transform3D(0.984525, -0.145857, -0.0971374, 0.107493, 0.0648604, 0.992088, -0.138403, -0.987177, 0.0795353, 0.000889702, 0.00936849, -0.0292885)
+bone_name = "LowerLeg.L"
+bone_idx = 28
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="L LowerLegCol" type="CollisionShape3D" parent="RootNode/Armature/Skeleton3D/L Lower Leg/BoneAttachment3D" index="0"]
+transform = Transform3D(0.999999, -1.04308e-07, -8.9407e-08, -5.96046e-08, 0.999998, 7.45058e-09, 1.19209e-07, -1.11759e-08, 0.999999, -1.86265e-09, 0.0160417, 0)
+shape = SubResource("CapsuleShape3D_mlcqi")
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="RootNode/Armature/Skeleton3D/L Foot" index="0"]
+transform = Transform3D(0.214106, 0.962589, -0.166077, 0.0170872, 0.166303, 0.985927, 0.976661, -0.21393, 0.0191584, -0.00489193, 0.011645, -0.063948)
+bone_name = "Sole.L"
+bone_idx = 29
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="L SoleCol" type="CollisionShape3D" parent="RootNode/Armature/Skeleton3D/L Foot/BoneAttachment3D" index="0"]
+transform = Transform3D(0.986413, 0.164272, -3.72529e-09, -0.164273, 0.986412, -2.98023e-08, 5.00586e-09, 0, 0.999999, -0.000143678, 0.00646697, 0.000569192)
+shape = SubResource("CapsuleShape3D_vfxvb")
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="RootNode/Armature/Skeleton3D/Torso" index="0"]
+transform = Transform3D(-0.00229223, -0.13688, 0.990585, 0.999251, 0.037939, 0.00755477, -0.0386159, 0.98986, 0.136691, -0.000371036, 0.000101611, 0.0143908)
+bone_name = "Torso1"
+bone_idx = 2
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="TorsoCol" type="CollisionShape3D" parent="RootNode/Armature/Skeleton3D/Torso/BoneAttachment3D" index="0"]
+transform = Transform3D(0.999998, -1.86265e-09, 2.23517e-08, 1.30385e-08, 0.999997, 0, 1.49012e-08, 1.49012e-08, 0.999999, -9.31323e-10, 0.00698058, 9.31323e-10)
+shape = SubResource("BoxShape3D_7ifw8")
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="RootNode/Armature/Skeleton3D/Head" index="0"]
+transform = Transform3D(0.00101882, -0.185182, 0.982704, 0.998724, 0.0497811, 0.00834537, -0.0504654, 0.981441, 0.184996, -0.00146528, 0.000961499, 0.0354684)
+bone_name = "Head1"
+bone_idx = 22
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="HeadCol" type="CollisionShape3D" parent="RootNode/Armature/Skeleton3D/Head/BoneAttachment3D" index="0"]
+transform = Transform3D(0.999998, -4.65661e-09, 0, -9.31323e-10, 0.999997, 2.98023e-08, 0, -1.49012e-08, 0.999999, 2.79397e-09, 0.00745446, 0.00404988)
+shape = SubResource("SphereShape3D_6b5bs")
+
+[node name="Hand" parent="RootNode/Armature/Skeleton3D" index="10"]
+transform = Transform3D(1, 7.45058e-09, -1.33878e-09, -7.45058e-09, 1, -4.65661e-10, -2.91038e-10, 0, 1, 0, 0, 0)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="RootNode/Armature/Skeleton3D/R UpperLeg" index="0"]
+transform = Transform3D(-0.992344, -0.0119664, -0.122924, 0.123501, -0.088064, -0.988429, 0.00100279, -0.996043, 0.0888676, 0.000400001, -0.0066, -0.000699997)
+bone_name = "UpperLeg.R"
+bone_idx = 32
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="R UpperLegCol" type="CollisionShape3D" parent="RootNode/Armature/Skeleton3D/R UpperLeg/BoneAttachment3D" index="0"]
+transform = Transform3D(0.999999, 1.49012e-07, -5.21541e-08, 0, 1, 4.47035e-08, 5.58794e-08, -5.96046e-08, 1, -7.45058e-09, 0.011238, -9.31323e-10)
+shape = SubResource("CapsuleShape3D_ailmk")
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="RootNode/Armature/Skeleton3D/R Lower Leg" index="0"]
+transform = Transform3D(-0.942729, -0.200567, -0.266525, 0.278277, -0.03234, -0.959956, 0.183916, -0.979146, 0.0863009, 5.65129e-05, -0.00912782, -0.0292908)
+bone_name = "LowerLeg.R"
+bone_idx = 33
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="R LowerLegCol" type="CollisionShape3D" parent="RootNode/Armature/Skeleton3D/R Lower Leg/BoneAttachment3D" index="0"]
+transform = Transform3D(0.999999, -1.04308e-07, -8.9407e-08, -5.96046e-08, 0.999998, 7.45058e-09, 1.19209e-07, -1.11759e-08, 0.999999, -1.86265e-09, 0.0160417, 0)
+shape = SubResource("CapsuleShape3D_mlcqi")
+
+[node name="R Foot" parent="RootNode/Armature/Skeleton3D" index="18"]
+transform = Transform3D(1, 0, 1.39698e-09, 1.49012e-08, 1, 3.72529e-09, 0, -1.86265e-09, 1, 0, 0, 0)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="RootNode/Armature/Skeleton3D/R Foot" index="0"]
+transform = Transform3D(-0.226139, 0.917417, -0.327426, 0.01685, -0.332399, -0.942988, -0.973949, -0.218764, 0.0597099, -0.00763479, -0.0101463, -0.0636375)
+bone_name = "Sole.R"
+bone_idx = 34
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="R SoleCol" type="CollisionShape3D" parent="RootNode/Armature/Skeleton3D/R Foot/BoneAttachment3D" index="0"]
+transform = Transform3D(0.983288, -0.182046, 0, 0.182046, 0.983287, -2.98023e-08, 2.09548e-08, 0, 0.999999, -0.000143678, 0.00646697, 0.000569192)
+shape = SubResource("CapsuleShape3D_vfxvb")
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Movement/Idle"
+libraries = {
+"": SubResource("AnimationLibrary_5644c"),
+"Movement": ExtResource("2_nhsvr")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeBlendTree_5fkgu")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/IdleRunBlend/blend_amount = 0.0
+parameters/ToJumpBlend/blend_amount = 0.0

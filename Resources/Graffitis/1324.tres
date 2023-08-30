@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BaseGraffiti" load_steps=3 format=3 uid="uid://bttinf0tbko5i"]
+
+[ext_resource type="Texture2D" uid="uid://bisiuogdq7ikf" path="res://BlackDot.png" id="1_1t205"]
+[ext_resource type="Script" path="res://Resources/Graffitis/BaseGraffiti.gd" id="1_8o6n4"]
+
+[resource]
+script = ExtResource("1_8o6n4")
+art = ExtResource("1_1t205")
+artist = "BRC"
