@@ -16,6 +16,8 @@ signal jumped
 ## Emitted when a sprint started, is called when [SprintAbility3D] is active.
 signal sprinted
 
+signal grinded
+
 
 @export_group("Movement")
 
@@ -101,6 +103,9 @@ var _direction_base_node : Node3D
 ## Above head collision checker, used for crouching and jumping.
 @onready var head_check: RayCast3D = get_node(NodePath("Head Check"))
 
+#Used for grinding on rails
+@onready var rail_cast: ShapeCast3D = get_node(NodePath("RailsCast"))
+
 ## Basic movement ability.
 @onready var walk_ability: WalkAbility3D = get_node(NodePath("WalkAbility3D"))
 
@@ -109,6 +114,9 @@ var _direction_base_node : Node3D
 
 ## Simple ability that adds a vertical impulse when actived (Jump).
 @onready var jump_ability: JumpAbility3D = get_node(NodePath("JumpAbility3D"))
+
+#Ability that sets your velocity according to a path3d
+@onready var grind_ability: GrindAbility3D = get_node(NodePath("GrindAbility3D"))
 
 ## Stores normal speed
 @onready var _normal_speed: int = speed
@@ -137,9 +145,11 @@ func move(_delta: float, input_axis := Vector2.ZERO, input_jump := false, input_
 	if not jump_ability.is_actived():
 		velocity.y -= gravity * _delta
 	
+	
 	jump_ability.set_active(input_jump and is_on_floor() and not head_check.is_colliding())
 	walk_ability.set_active(true)
 	sprint_ability.set_active(input_sprint and is_on_floor() and  input_axis.x >= 0.5)
+	grind_ability.set_active(rail_cast.is_colliding())
 	
 	var multiplier = 1.0
 	for ability in _abilities:
@@ -179,6 +189,7 @@ func _load_nodes(nodePaths: Array) -> Array[MovementAbility3D]:
 func _connect_signals():
 	sprint_ability.actived.connect(_on_sprinted.bind())
 	jump_ability.actived.connect(_on_jumped.bind())
+	grind_ability.actived.connect(_on_grinded.bind())
 
 func _start_variables():
 	walk_ability.acceleration = acceleration
@@ -186,6 +197,7 @@ func _start_variables():
 	walk_ability.air_control = air_control
 	sprint_ability.speed_multiplier = sprint_speed_multiplier
 	jump_ability.height = jump_height
+	grind_ability.rails_shapecast = rail_cast
 
 
 
@@ -195,7 +207,7 @@ func _check_landed():
 		_reset_step()
 	_last_is_on_floor = is_on_floor()
 	
-
+	
 func _check_step(_delta):
 	if _is_step(_horizontal_velocity.length(), is_on_floor(), _delta):
 		_step(is_on_floor())
@@ -235,6 +247,8 @@ func _is_step(velocity:float, is_on_floor:bool, _delta:float) -> bool:
 func _on_sprinted():
 	emit_signal("sprinted")
 
-
 func _on_jumped():
 	emit_signal("jumped")
+
+func _on_grinded():
+	emit_signal("grinded")

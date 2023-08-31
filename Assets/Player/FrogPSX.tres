@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://c13yl48vea8tr"]
+
+[ext_resource type="Shader" path="res://Shaders/FrogToon.gdshader" id="1_n0om4"]
+[ext_resource type="Texture2D" uid="uid://dh1cwsgbuhx4m" path="res://Assets/Player/Image_0.png" id="2_aym1o"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_n0om4")
+shader_parameter/affine_mapping = false
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.25
+shader_parameter/resolution = Vector2i(960, 720)
+shader_parameter/albedo = ExtResource("2_aym1o")

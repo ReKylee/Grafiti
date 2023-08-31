@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://8lxsyol8e7tr"]
+[gd_scene load_steps=18 format=3 uid="uid://se0503y4nitu"]
 
 [ext_resource type="Script" path="res://addons/smoother.gd" id="1_20u3x"]
 [ext_resource type="Sky" uid="uid://cbbdl23q60wak" path="res://Environments/SkyBox.res" id="1_h2pms"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_ui5m2"]
 [ext_resource type="Material" uid="uid://c1u020xb37y6n" path="res://Environments/Materials/Blue.material" id="2_2gv6m"]
+[ext_resource type="Shader" path="res://Shaders/PSXPP.gdshader" id="3_807on"]
 [ext_resource type="Material" uid="uid://bly25nr0aqsv3" path="res://Environments/Materials/BlueGrid.material" id="3_gdvy2"]
 [ext_resource type="Material" uid="uid://d3up41bo0vjj0" path="res://Environments/Materials/OrangeGrid.material" id="4_0vvng"]
 [ext_resource type="Material" uid="uid://ddpgp1pyklffr" path="res://Environments/Materials/GreenGrid.material" id="5_yfwcj"]
@@ -13,6 +14,19 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="9_81gt5"]
 [ext_resource type="PackedScene" uid="uid://cnwce88rxk0x6" path="res://Scripts/Player/Player.tscn" id="12_rdbky"]
 [ext_resource type="PackedScene" uid="uid://3gh2fylccoia" path="res://Scripts/UI/ui.tscn" id="13_gksmo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h3sih"]
+render_priority = 0
+shader = ExtResource("3_807on")
+shader_parameter/enabled = true
+shader_parameter/dithering = true
+shader_parameter/colors = 16
+shader_parameter/dither_size = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_eurln"]
+material = SubResource("ShaderMaterial_h3sih")
+flip_faces = true
+size = Vector2(2, 2)
 
 [sub_resource type="Environment" id="Environment_qyvd4"]
 background_mode = 2
@@ -35,6 +49,9 @@ current = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 script = ExtResource("1_ui5m2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+mesh = SubResource("QuadMesh_eurln")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.892271, -0.274443, 0.358516, 2.02684e-08, 0.794054, 0.607847, -0.451501, 0.542364, -0.708511, 0, 2.76815, 9.26053)
