@@ -6,20 +6,6 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wxm8v"]
 render_priority = 0
 shader = ExtResource("2_4lgdw")
-shader_parameter/ToonRampOffset = 0.35
-shader_parameter/ToonRampSmoothness = 0.192
-shader_parameter/ToonRampTinting = Color(0.388235, 0, 0, 1)
-shader_parameter/RimPower = 1.0
-shader_parameter/RimCutOff = 0.5
-shader_parameter/RimSmoothness = 0.05
-shader_parameter/RimLightBrightness = 20.0
-shader_parameter/SubSurfDistortion = 0.354
-shader_parameter/SubSurfTint = Color(0.898039, 0.443137, 0.776471, 1)
-shader_parameter/SubSurfBrightness = 4.798
-shader_parameter/SubSurfCutoff = 0.5
-shader_parameter/SubSurfSmoothness = 0.096
-shader_parameter/SubSurfTexture = ExtResource("1_qc6cn")
-shader_parameter/Texture = ExtResource("1_qc6cn")
 
 [resource]
 next_pass = SubResource("ShaderMaterial_wxm8v")

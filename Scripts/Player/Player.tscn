@@ -19,7 +19,7 @@ height = 3.31051
 [sub_resource type="BoxShape3D" id="BoxShape3D_dvmkk"]
 size = Vector3(1, 0.5, 1)
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_bhdwp"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_jwxhs"]
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
@@ -41,8 +41,10 @@ script = ExtResource("3_pcx4q")
 [node name="JumpAbility3D" type="Node3D" parent="."]
 script = ExtResource("4_lqbsn")
 
-[node name="GrindAbility3D" type="Node3D" parent="."]
+[node name="GrindAbility3D" type="Node3D" parent="." node_paths=PackedStringArray("rails_shapecast", "draw_3d")]
 script = ExtResource("5_t4373")
+rails_shapecast = NodePath("../RailsCast")
+draw_3d = NodePath("../Draw3D")
 
 [node name="InteractionArea" type="Area3D" parent="."]
 collision_layer = 2
@@ -76,7 +78,7 @@ collision_mask = 8
 
 [node name="Draw3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("ImmediateMesh_bhdwp")
+mesh = SubResource("ImmediateMesh_jwxhs")
 script = ExtResource("3_2qu0c")
 
 [connection signal="jumped" from="." to="Froggo" method="_on_player_jumped"]

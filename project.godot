@@ -46,7 +46,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/draw3d/plugin.cfg", "res://addons/easy_velocity_vector_display/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
+enabled=PackedStringArray("res://addons/Path3DEditor/plugin.cfg", "res://addons/draw3d/plugin.cfg", "res://addons/easy_velocity_vector_display/plugin.cfg", "res://addons/goshapes/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
 
 [input]
 
