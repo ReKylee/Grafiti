@@ -145,9 +145,10 @@ func move(_delta: float, input_axis := Vector2.ZERO, input_jump := false, input_
 	_check_landed()
 	if not jump_ability.is_actived():
 		velocity.y -= gravity * _delta
+	
 		
-	grind_ability.set_active(!jump_ability.is_actived())
-	jump_ability.set_active(input_jump and is_on_floor() and not head_check.is_colliding())
+	jump_ability.set_active(can_jump(input_jump))
+	grind_ability.set_active(rail_cast.is_colliding() and not is_on_floor() and not jump_ability.is_actived())
 	walk_ability.set_active(true)
 	sprint_ability.set_active(input_sprint and is_on_floor() and  input_axis.x >= 0.5)
 	
@@ -163,7 +164,11 @@ func move(_delta: float, input_axis := Vector2.ZERO, input_jump := false, input_
 	_horizontal_velocity = Vector3(velocity.x, 0.0, velocity.z)
 	_check_step(_delta)
 
-
+func can_jump(input_jump) -> bool:
+	return (
+		input_jump 
+		and (is_on_floor() or rail_cast.is_colliding()) 
+		and not head_check.is_colliding())
 
 ## Returns true if the character controller is sprinting
 func is_sprinting() -> bool:
