@@ -82,7 +82,7 @@ static func curve_to_path(curve: Curve3D, interpolate: int, inverted: bool, path
 		else:
 			var dif = points[i] - points[i - 1]
 			length += dif.length()
-			ups[i] = curve.interpolate_baked_up_vector(length, true)
+			ups[i] = curve.sample_baked_up_vector(length, true)
 	return PathData.new(points, ups)
 	
 

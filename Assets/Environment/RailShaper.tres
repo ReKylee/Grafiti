@@ -1,23 +1,9 @@
-[gd_resource type="Resource" script_class="BlockShaper" load_steps=13 format=3 uid="uid://dulrb0jsg18r7"]
+[gd_resource type="Resource" script_class="BlockShaper" load_steps=9 format=3 uid="uid://dulrb0jsg18r7"]
 
-[ext_resource type="Script" path="res://addons/goshapes/MeshShaper/Shapers/BottomShaper.gd" id="1_qheen"]
 [ext_resource type="Script" path="res://addons/goshapes/MeshShaper/BlockShaper.gd" id="1_wr574"]
-[ext_resource type="Script" path="res://addons/goshapes/MeshShaper/Shapers/CapFlatShaper.gd" id="2_0d86m"]
 [ext_resource type="Texture2D" uid="uid://htlvr3yt3t81" path="res://Assets/Environment/textures/Railing_Railing_BaseColor.png" id="2_a6l8b"]
 [ext_resource type="Texture2D" uid="uid://djlkkjoh8e2c8" path="res://Assets/Environment/textures/Railing_Railing_Roughness.png" id="3_tewhj"]
 [ext_resource type="Script" path="res://addons/goshapes/MeshShaper/Shapers/WallMeshShaper.gd" id="4_smmq4"]
-
-[sub_resource type="Resource" id="Resource_y2vw4"]
-script = ExtResource("1_qheen")
-base_depth = 1.0
-enabled = false
-
-[sub_resource type="Resource" id="Resource_mg50w"]
-script = ExtResource("2_0d86m")
-conform_to_wall = false
-build_collider = true
-collision_layer = 1
-enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ksjkd"]
 resource_name = "Railing"
@@ -73,9 +59,7 @@ enabled = true
 
 [resource]
 script = ExtResource("1_wr574")
-cap_shaper = SubResource("Resource_mg50w")
 wall_shaper = SubResource("Resource_4myvh")
-bottom_shaper = SubResource("Resource_y2vw4")
 bottom_depth = 0.0
 collider_type = 0
 collider_ridge = 0.0

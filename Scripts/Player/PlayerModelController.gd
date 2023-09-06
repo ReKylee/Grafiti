@@ -28,11 +28,18 @@ func _physics_process(delta):
 
 func _on_player_jumped():
 	var tween = create_tween()
-	tween.tween_property(anim_tree, "parameters/ToJumpBlend/blend_amount", 1, .1).set_ease(Tween.EASE_IN)
+	tween.tween_property(anim_tree, "parameters/SkateRunJumpBlend/blend_amount", 1, .1).set_ease(Tween.EASE_IN)
 	jumped = true
 
 func _on_player_landed():
 	var tween = create_tween()
-	tween.tween_property(anim_tree, "parameters/ToJumpBlend/blend_amount", 0, .1).set_ease(Tween.EASE_OUT)
+	tween.tween_property(anim_tree, "parameters/SkateRunJumpBlend/blend_amount", 0, .1).set_ease(Tween.EASE_OUT)
+	rotation.z = 0.0
+	jumped = false
+
+
+func _on_grind_actived():
+	var tween = create_tween()
+	tween.tween_property(anim_tree, "parameters/SkateRunJumpBlend/blend_amount", -1, .1).set_ease(Tween.EASE_IN)
 	rotation.z = 0.0
 	jumped = false

@@ -14,6 +14,10 @@ func _ready():
 	_direction_base_node = camera_springarm
 	GameEvents.graffiti_ended.connect(graffiti_ended)
 
+func set_froggo_basis(b : Basis):
+	froggo.global_transform.basis = b
+func get_froggo_basis():
+	return froggo.global_transform.basis
 func _physics_process(delta):
 	draw_3d.clear()
 	var input_axis = Input.get_vector("move_backward", "move_forward", "move_left", "move_right")
@@ -21,7 +25,7 @@ func _physics_process(delta):
 	var input_sprint = Input.is_action_pressed("move_sprint")
 	froggo.velocity = transform.basis * velocity
 	froggo.direction = _direction
-	draw_3d.draw_line([Vector3.ZERO, froggo.velocity])
+	draw_3d.draw_line([Vector3.ZERO, froggo.velocity]) 
 	move(delta, input_axis, input_jump, input_sprint)
 	check_for_graffiti()
 

@@ -145,11 +145,9 @@ func move(_delta: float, input_axis := Vector2.ZERO, input_jump := false, input_
 	_check_landed()
 	if not jump_ability.is_actived():
 		velocity.y -= gravity * _delta
+		grind_ability.set_active(rail_cast.is_colliding() and not is_on_floor() and not input_jump)
 	
-		
 	jump_ability.set_active(can_jump(input_jump))
-	grind_ability.set_active(rail_cast.is_colliding() and not is_on_floor() and not jump_ability.is_actived())
-	walk_ability.set_active(true)
 	sprint_ability.set_active(input_sprint and is_on_floor() and  input_axis.x >= 0.5)
 	
 	var multiplier = 1.0
