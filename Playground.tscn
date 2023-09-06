@@ -104,7 +104,6 @@ current = true
 script = ExtResource("1_ui5m2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
-visible = false
 mesh = SubResource("QuadMesh_eurln")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

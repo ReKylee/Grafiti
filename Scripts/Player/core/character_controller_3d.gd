@@ -16,7 +16,8 @@ signal jumped
 ## Emitted when a sprint started, is called when [SprintAbility3D] is active.
 signal sprinted
 
-signal grinded
+signal grind_start
+signal grind_end
 
 
 @export_group("Movement")
@@ -188,7 +189,8 @@ func _load_nodes(nodePaths: Array) -> Array[MovementAbility3D]:
 func _connect_signals():
 	sprint_ability.actived.connect(_on_sprinted.bind())
 	jump_ability.actived.connect(_on_jumped.bind())
-	grind_ability.actived.connect(_on_grinded.bind())
+	grind_ability.actived.connect(_on_grind_start.bind())
+	grind_ability.deactived.connect(_on_grind_end.bind())
 
 func _start_variables():
 	walk_ability.acceleration = acceleration
@@ -249,5 +251,8 @@ func _on_sprinted():
 func _on_jumped():
 	emit_signal("jumped")
 
-func _on_grinded():
-	emit_signal("grinded")
+func _on_grind_start():
+	emit_signal("grind_start")
+
+func _on_grind_end():
+	emit_signal("grind_end")

@@ -17,7 +17,7 @@ func _ready():
 	
 
 func array_transform(arr : Array, transformation : Transform3D) -> Array:
-	var new : Array
+	var new : Array = []
 	for p in arr:
 		new.append(transformation * p)
 	return new
@@ -40,7 +40,6 @@ func apply(velocity : Vector3, speed : float, is_on_floor : bool, direction : Ve
 		var local_points = array_transform(path_date.curve.get_baked_points(), transform)
 		local_points = array_translate(local_points, -local_pos)
 		var dir : Vector3
-		
 		
 		var closest_offset = path_date.curve.get_closest_offset(local_pos)
 		var closest_sampled = path_date.curve.sample_baked_with_rotation(closest_offset, false, true) as Transform3D
