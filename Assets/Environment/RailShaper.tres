@@ -63,4 +63,4 @@ wall_shaper = SubResource("Resource_4myvh")
 bottom_depth = 0.0
 collider_type = 0
 collider_ridge = 0.0
-enabled = true
+enabled = false

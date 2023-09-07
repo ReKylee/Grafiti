@@ -18,6 +18,7 @@ func set_froggo_basis(b : Basis):
 	froggo.global_transform.basis = b
 func get_froggo_basis():
 	return froggo.global_transform.basis
+	
 func _physics_process(delta):
 	draw_3d.clear()
 	var input_axis = Input.get_vector("move_backward", "move_forward", "move_left", "move_right")

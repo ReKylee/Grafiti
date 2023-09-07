@@ -7,7 +7,7 @@ var velocity : Vector3
 var direction : Vector3 
 var on_ground : bool
 var jumped : bool
-
+var grinding : bool
 
 func get_rot(delta):
 	var d = .7
@@ -18,7 +18,7 @@ func get_rot(delta):
 
 func _physics_process(delta):
 	
-	if direction:
+	if direction and not grinding:
 		global_rotation.y = lerp_angle(global_rotation.y, Vector3.RIGHT.signed_angle_to(velocity, Vector3.UP), 12 * delta)
 
 	anim_tree["parameters/IdleRunBlend/blend_amount"] = lerp(anim_tree["parameters/IdleRunBlend/blend_amount"], direction.normalized().length(), 7 * delta )
@@ -42,4 +42,10 @@ func _on_grind_actived():
 	var tween = create_tween()
 	tween.tween_property(anim_tree, "parameters/SkateRunJumpBlend/blend_amount", -1, .1).set_ease(Tween.EASE_IN)
 	rotation.z = 0.0
+	grinding = true
 	jumped = false
+
+
+func _on_grind_deactived():
+	grinding = false
+	

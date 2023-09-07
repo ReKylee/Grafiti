@@ -19,7 +19,7 @@ height = 3.31051
 [sub_resource type="BoxShape3D" id="BoxShape3D_dvmkk"]
 size = Vector3(1, 0.5, 1)
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_wrrca"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_pmgkd"]
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
@@ -78,9 +78,12 @@ collision_mask = 8
 
 [node name="Draw3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("ImmediateMesh_wrrca")
+mesh = SubResource("ImmediateMesh_pmgkd")
 script = ExtResource("3_2qu0c")
 
 [connection signal="jumped" from="." to="Froggo" method="_on_player_jumped"]
 [connection signal="landed" from="." to="Froggo" method="_on_player_landed"]
+[connection signal="actived" from="GrindAbility3D" to="GrindAbility3D" method="_on_actived"]
 [connection signal="actived" from="GrindAbility3D" to="Froggo" method="_on_grind_actived"]
+[connection signal="deactived" from="GrindAbility3D" to="GrindAbility3D" method="_on_deactived"]
+[connection signal="deactived" from="GrindAbility3D" to="Froggo" method="_on_grind_deactived"]
