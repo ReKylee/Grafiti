@@ -141,11 +141,12 @@ func setup():
 ## parameters are inputs that are sent to be handled by all abilities.
 func move(_delta: float, input_axis := Vector2.ZERO, input_jump := false, input_sprint := false ) -> void:
 	var direction = _direction_input(input_axis, _direction_base_node)
+	rail_cast.force_shapecast_update()
 	
 	_check_landed()
-	if not jump_ability.is_actived():
+	if not jump_ability.is_actived() and not is_on_floor():
 		velocity.y -= gravity * _delta
-		grind_ability.set_active(rail_cast.is_colliding() and not is_on_floor() and not input_jump)
+		grind_ability.set_active(rail_cast.is_colliding() and not input_jump)
 	jump_ability.set_active(can_jump(input_jump))
 	sprint_ability.set_active(input_sprint and is_on_floor() and  input_axis.x >= 0.5)
 	
@@ -201,6 +202,7 @@ func _start_variables():
 	sprint_ability.speed_multiplier = sprint_speed_multiplier
 	jump_ability.height = jump_height
 	grind_ability.rails_shapecast = rail_cast
+	grind_ability.player = self
 
 
 

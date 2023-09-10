@@ -19,7 +19,7 @@ height = 3.31051
 [sub_resource type="BoxShape3D" id="BoxShape3D_dvmkk"]
 size = Vector3(1, 0.5, 1)
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_pmgkd"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_6y8ue"]
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
@@ -74,16 +74,18 @@ target_position = Vector3(0, 1, 0)
 [node name="RailsCast" type="ShapeCast3D" parent="."]
 shape = SubResource("BoxShape3D_dvmkk")
 target_position = Vector3(0, -0.075, 0)
+margin = 0.1
+max_results = 1
 collision_mask = 8
 
 [node name="Draw3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("ImmediateMesh_pmgkd")
+mesh = SubResource("ImmediateMesh_6y8ue")
 script = ExtResource("3_2qu0c")
 
+[connection signal="grind_end" from="." to="Froggo" method="_on_grind_deactived"]
+[connection signal="grind_start" from="." to="Froggo" method="_on_grind_actived"]
 [connection signal="jumped" from="." to="Froggo" method="_on_player_jumped"]
 [connection signal="landed" from="." to="Froggo" method="_on_player_landed"]
 [connection signal="actived" from="GrindAbility3D" to="GrindAbility3D" method="_on_actived"]
-[connection signal="actived" from="GrindAbility3D" to="Froggo" method="_on_grind_actived"]
 [connection signal="deactived" from="GrindAbility3D" to="GrindAbility3D" method="_on_deactived"]
-[connection signal="deactived" from="GrindAbility3D" to="Froggo" method="_on_grind_deactived"]
