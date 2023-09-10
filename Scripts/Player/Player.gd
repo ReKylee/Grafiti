@@ -1,6 +1,6 @@
 extends CharacterController3D
 
-
+@export var rail_basis : Node3D
 @onready var camera_marker = $CameraAnchor/CameraPos as Marker3D
 @onready var camera_springarm = $CameraAnchor as SpringArm3D
 @onready var graffiti_area = $InteractionArea as Area3D
@@ -18,7 +18,11 @@ func set_froggo_basis(b : Basis):
 	froggo.global_transform.basis = b
 func get_froggo_basis():
 	return froggo.global_transform.basis
-	
+
+func get_forward_direction() -> Vector3:
+	var v = froggo.transform.basis.z as Vector3
+	return (Vector3(v.x + 0.1, 0, v.z).rotated(Vector3.UP, PI / 2).normalized())
+
 func _physics_process(delta):
 	draw_3d.clear()
 	var input_axis = Input.get_vector("move_backward", "move_forward", "move_left", "move_right")
