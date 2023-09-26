@@ -28,6 +28,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameEvents="*res://Scripts/Autoload/game_events.gd"
+InputHelper="*res://addons/input_helper/input_helper.gd"
 
 [debug]
 
@@ -46,7 +47,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Path3DEditor/plugin.cfg", "res://addons/draw3d/plugin.cfg", "res://addons/easy_velocity_vector_display/plugin.cfg", "res://addons/goshapes/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
+enabled=PackedStringArray("res://addons/Path3DEditor/plugin.cfg", "res://addons/draw3d/plugin.cfg", "res://addons/easy_velocity_vector_display/plugin.cfg", "res://addons/goshapes/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
 
 [input]
 

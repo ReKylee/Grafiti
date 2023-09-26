@@ -58,14 +58,35 @@ var watcher_pathmod := ResourceWatcher.new(mark_dirty)
 var axis_match_index = -1
 var axis_match_points := PackedInt32Array()
 var has_made_local = false
+var path_follow : PathFollow3D = null
+var follow_remote_transform : RemoteTransform3D = null
+
 
 
 func _ready() -> void:
 	if curve == null:
 		curve = Curve3D.new()
+	if follow_remote_transform == null:
+		follow_remote_transform = RemoteTransform3D.new() as RemoteTransform3D
+	if path_follow == null:
+		path_follow = PathFollow3D.new() as PathFollow3D
+		path_follow.cubic_interp = false
+		path_follow.rotation_mode = PathFollow3D.ROTATION_ORIENTED
+		path_follow.v_offset = .5
+		path_follow.tilt_enabled = false
+		add_child(path_follow)
+		path_follow.add_child(follow_remote_transform)
 	if not ResourceUtils.is_local(curve):
 		curve = curve.duplicate(true)
 		
+func set_follow_progress(progress : float) -> void:
+	path_follow.progress = progress
+func get_follow_progress() -> float:
+	return path_follow.progress
+func set_remote_path(path : NodePath) -> void:
+	follow_remote_transform.remote_path = path 
+func get_remote_path() -> NodePath:
+	return follow_remote_transform.remote_path
 
 func _enter_tree() -> void:
 	set_display_folded(true)
