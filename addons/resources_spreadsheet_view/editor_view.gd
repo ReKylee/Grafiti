@@ -28,6 +28,7 @@ var column_hints := []
 var column_hint_strings := []
 var rows := []
 var remembered_paths := {}
+var table_functions_dict := {}
 
 var search_cond : RefCounted
 var io : RefCounted
@@ -45,6 +46,10 @@ func _ready():
 
 		node_recent_paths.load_paths(as_var.get("recent_paths", []))
 		node_columns.hidden_columns = as_var.get("hidden_columns", {})
+		table_functions_dict = as_var.get("table_functions", {})
+		for x in $"HeaderContentSplit/VBoxContainer/Search/Search".get_children():
+			if x.has_method(&"load_saved_functions"):
+				x.load_saved_functions(table_functions_dict)
 
 	if node_recent_paths.recent_paths.size() >= 1:
 		display_folder(node_recent_paths.recent_paths[0], "resource_name", false, true)
@@ -87,9 +92,6 @@ func display_folder(folderpath : String, sort_by : String = "", sort_reverse : b
 
 	if folderpath.ends_with(".tres") and !folderpath.ends_with(ResourceTablesImport.SUFFIX):
 		folderpath = folderpath.get_base_dir() + "/"
-	
-	if search_cond == null:
-		_on_search_cond_text_submitted("true")
 
 	node_recent_paths.add_path_to_recent(folderpath)
 	first_row = node_page_manager.first_row
@@ -150,7 +152,7 @@ func fill_property_data(res):
 
 
 func insert_row_sorted(res : Resource, rows : Array, sort_by : String, sort_reverse : bool):
-	if !search_cond.can_show(res, rows.size()):
+	if search_cond != null && !search_cond.can_show(res, rows.size()):
 		return
 		
 	for i in rows.size():
@@ -244,6 +246,7 @@ func save_data():
 		{
 			"recent_paths" : node_recent_paths.recent_paths,
 			"hidden_columns" : node_columns.hidden_columns,
+			"table_functions" : table_functions_dict,
 		}
 	, "  "))
 
@@ -324,7 +327,7 @@ func duplicate_selected_rows(new_name : String):
 func delete_selected_rows():
 	io.delete_rows(_get_row_resources(_selection.get_edited_rows()))
 	refresh()
-	call_deferred(&"refresh")
+	refresh.call_deferred()
 
 
 func has_row_names():
@@ -356,7 +359,7 @@ func _update_resources(update_rows : Array, update_row_indices : Array[int], upd
 
 		column_editor.set_value(update_cell, values[i])
 		if values[i] is String:
-			values[i] = _try_convert(values[i], column_types[update_column])
+			values[i] = try_convert(values[i], column_types[update_column])
 
 		if values[i] == null:
 			continue
@@ -384,7 +387,7 @@ func _update_resources(update_rows : Array, update_row_indices : Array[int], upd
 	io.save_entries(rows, update_row_indices)
 
 
-func _try_convert(value, type):
+func try_convert(value, type):
 	if type == TYPE_BOOL:
 		# "off" displayed in lowercase, "ON" in uppercase.
 		return value[0] == "o"
@@ -400,34 +403,6 @@ func _get_row_resources(row_indices) -> Array:
 		arr[i] = rows[row_indices[i]]
 
 	return arr
-
-
-func _on_search_cond_text_submitted(new_text : String):
-	var new_script := GDScript.new()
-	new_script.source_code = "static func can_show(res, index):\n\treturn " + new_text
-	new_script.reload()
-
-	search_cond = new_script
-	refresh()
-
-
-func _on_process_expr_text_submitted(new_text : String):
-	if new_text == "":
-		new_text = "true"
-
-	var new_script := GDScript.new()
-	new_script.source_code = "static func get_result(value, res, row_index, cell_index):\n\treturn " + new_text
-	new_script.reload()
-
-	var new_script_instance = new_script.new()
-	var values = get_edited_cells_values()
-	var cur_row := 0
-
-	var edited_rows = _selection.get_edited_rows()
-	for i in values.size():
-		values[i] = new_script_instance.get_result(values[i], rows[edited_rows[i]], edited_rows[i], i)
-
-	set_edited_cells_values(values)
 
 
 func _on_File_pressed():

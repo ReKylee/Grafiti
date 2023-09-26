@@ -43,16 +43,15 @@ func apply(velocity : Vector3, speed : float, is_on_floor : bool, direction : Ve
 		#point transform
 		closest_point.origin = current_rail.to_global(closest_point.origin)
 		closest_corner = current_rail.to_global(closest_corner)
-		#closest_point = closest_point.looking_at(closest_point.basis.z, closest_point.basis.y)
-		#initialize starting_position
-		starting_transform = closest_point
 		
 		#check if the player has reached the closest corner
 		if(closest_point.origin.is_equal_approx(closest_corner)):
-			pass
+			print("corner")
 		
 		#DEBUG
 		player.rail_basis.global_transform = closest_point
+		
+		player._direction = closest_point.basis.z * grind_direction
 		velocity = closest_point.basis.z * grind_direction * grind_speed
 		
 	return velocity
@@ -62,12 +61,20 @@ func _on_actived():
 	current_rail = rails_shapecast.get_collider(0).get_parent() as Goshape
 	current_path_data = current_rail.get_path_data(0)
 	grind_direction = sign(player.get_forward_direction().x)
-	if(starting_transform): 
-		player.global_transform = starting_transform
-		player.global_translate(Vector3(0, 1, 0))
+	#player's global position in the rail's local space
+	var local_pos = current_rail.to_local(global_position)
+	#get the closest point offset
+	var closest_offset = current_path_data.curve.get_closest_offset(local_pos)
+	#get closest point with rotation
+	var closest_point = current_path_data.curve.sample_baked_with_rotation(closest_offset, false, true) as Transform3D
+	#point transform
+	closest_point.origin = current_rail.to_global(closest_point.origin)
+	player.global_transform.origin =closest_point.origin
+	player.global_translate(Vector3(0, 1, 0))
 
 func _on_deactived():
 	current_rail = null
 	current_path_data = null
 	grind_direction = 0
-	starting_transform = Transform3D.IDENTITY
+	player.global_transform.basis = Transform3D.IDENTITY.basis
+	

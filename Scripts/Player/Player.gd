@@ -14,14 +14,12 @@ func _ready():
 	_direction_base_node = camera_springarm
 	GameEvents.graffiti_ended.connect(graffiti_ended)
 
-func set_froggo_basis(b : Basis):
-	froggo.global_transform.basis = b
-func get_froggo_basis():
-	return froggo.global_transform.basis
 
 func get_forward_direction() -> Vector3:
-	var v = froggo.transform.basis.z as Vector3
-	return (Vector3(v.x + 0.1, 0, v.z).rotated(Vector3.UP, PI / 2).normalized())
+	var v = froggo.global_transform.basis.z as Vector3
+	return (Vector3(v.x, 0, v.z).rotated(Vector3.UP, PI / 2).normalized())
+
+
 
 func _physics_process(delta):
 	draw_3d.clear()

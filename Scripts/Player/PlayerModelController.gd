@@ -16,11 +16,13 @@ func get_rot(delta):
 	return rot
 
 
+
 func _physics_process(delta):
 	
 	if direction and not grinding:
 		global_rotation.y = lerp_angle(global_rotation.y, Vector3.RIGHT.signed_angle_to(velocity, Vector3.UP), 12 * delta)
-
+	if grinding:
+		global_rotation.y = lerp_angle(global_rotation.y, Vector3.RIGHT.signed_angle_to(direction, Vector3.UP), 12 * delta)
 	anim_tree["parameters/IdleRunBlend/blend_amount"] = lerp(anim_tree["parameters/IdleRunBlend/blend_amount"], direction.normalized().length(), 7 * delta )
 	
 	if jumped:
