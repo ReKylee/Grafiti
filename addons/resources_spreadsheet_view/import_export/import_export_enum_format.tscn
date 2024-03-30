@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckhf3bqy2rqjr"]
+[gd_scene load_steps=2 format=3 uid="uid://bt4ool0okeu13"]
 
 [ext_resource type="Script" path="res://addons/resources_spreadsheet_view/import_export/import_export_enum_format.gd" id="1"]
 

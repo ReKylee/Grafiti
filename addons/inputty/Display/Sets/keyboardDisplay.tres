@@ -1,0 +1,915 @@
+[gd_resource type="Resource" script_class="InputtyKeyboardDisplaySet" load_steps=250 format=3 uid="uid://c2tf8frcrai8d"]
+
+[ext_resource type="Script" path="res://addons/inputty/Display/InputtyDisplayItem.gd" id="1_8u7sa"]
+[ext_resource type="Texture2D" uid="uid://dejj8j1mcy0aw" path="res://addons/inputty/Display/IconTextures/mouse_lmb.svg" id="2_8mby8"]
+[ext_resource type="Texture2D" uid="uid://b2mxb32384nih" path="res://addons/inputty/Display/IconTextures/key_blank.svg" id="2_dwtnn"]
+[ext_resource type="Texture2D" uid="uid://c1ls6ncugm6cg" path="res://addons/inputty/Display/IconTextures/mouse_rmb.svg" id="3_mcdda"]
+[ext_resource type="Texture2D" uid="uid://bqonpgrynqtxc" path="res://addons/inputty/Display/IconTextures/key_esc.svg" id="3_pjsbo"]
+[ext_resource type="Texture2D" uid="uid://bm3fodguanjb4" path="res://addons/inputty/Display/IconTextures/key_tab.svg" id="4_ddowr"]
+[ext_resource type="Texture2D" uid="uid://bwnf2ue1b80ft" path="res://addons/inputty/Display/IconTextures/mouse_mmb.svg" id="4_trtoo"]
+[ext_resource type="Texture2D" uid="uid://diwnl4bl7hk8x" path="res://addons/inputty/Display/IconTextures/mouse_wheelup.svg" id="5_jsjvb"]
+[ext_resource type="Texture2D" uid="uid://brpj21tnxvqsn" path="res://addons/inputty/Display/IconTextures/key_backspace.svg" id="5_n0rjf"]
+[ext_resource type="Texture2D" uid="uid://b4to184gi64ks" path="res://addons/inputty/Display/IconTextures/key_enter.svg" id="6_0hbno"]
+[ext_resource type="Texture2D" uid="uid://dkk3ew7528kcd" path="res://addons/inputty/Display/IconTextures/mouse_wheeldown.svg" id="6_vl5jp"]
+[ext_resource type="Texture2D" uid="uid://ltpc6l1sbcg5" path="res://addons/inputty/Display/IconTextures/key_kp_enter.svg" id="7_02m1h"]
+[ext_resource type="Texture2D" uid="uid://bd5ax6ltp52wd" path="res://addons/inputty/Display/IconTextures/mouse_wheelleft.svg" id="7_v0xeq"]
+[ext_resource type="Texture2D" uid="uid://c0j1rto06sl8p" path="res://addons/inputty/Display/IconTextures/mouse_wheelright.svg" id="8_42r4i"]
+[ext_resource type="Texture2D" uid="uid://buc2xafm8gaeo" path="res://addons/inputty/Display/IconTextures/key_ins.svg" id="8_ji8sn"]
+[ext_resource type="Script" path="res://addons/inputty/Display/InputtyKeyboardDisplaySet.gd" id="9_7w0vf"]
+[ext_resource type="Texture2D" uid="uid://r0g40obg8pt4" path="res://addons/inputty/Display/IconTextures/key_del.svg" id="9_wctqx"]
+[ext_resource type="Texture2D" uid="uid://ck76ms6yuxhch" path="res://addons/inputty/Display/IconTextures/key_pause.svg" id="10_died6"]
+[ext_resource type="Texture2D" uid="uid://cn7uybcvp715c" path="res://addons/inputty/Display/IconTextures/key_prtscr.svg" id="11_116tu"]
+[ext_resource type="Texture2D" uid="uid://c17o221ileeao" path="res://addons/inputty/Display/IconTextures/key_home.svg" id="12_pq1gi"]
+[ext_resource type="Texture2D" uid="uid://b31islej6ll24" path="res://addons/inputty/Display/IconTextures/key_end.svg" id="13_un1h2"]
+[ext_resource type="Texture2D" uid="uid://c5ggfeirr7l0u" path="res://addons/inputty/Display/IconTextures/key_left.svg" id="14_61qq3"]
+[ext_resource type="Texture2D" uid="uid://cw2nb0ir8p24" path="res://addons/inputty/Display/IconTextures/key_up.svg" id="15_dkjcs"]
+[ext_resource type="Texture2D" uid="uid://cqv45kxp3uv0d" path="res://addons/inputty/Display/IconTextures/key_right.svg" id="16_g368b"]
+[ext_resource type="Texture2D" uid="uid://cdye0e5obodv" path="res://addons/inputty/Display/IconTextures/key_down.svg" id="17_vmipv"]
+[ext_resource type="Texture2D" uid="uid://csi31e4gc7ua2" path="res://addons/inputty/Display/IconTextures/key_pgup.svg" id="18_1riae"]
+[ext_resource type="Texture2D" uid="uid://bat2s4w7qv265" path="res://addons/inputty/Display/IconTextures/key_pgdn.svg" id="19_p1gko"]
+[ext_resource type="Texture2D" uid="uid://sftgaetgo2pi" path="res://addons/inputty/Display/IconTextures/key_shift.svg" id="20_2ifyx"]
+[ext_resource type="Texture2D" uid="uid://csyaflqkcya56" path="res://addons/inputty/Display/IconTextures/key_ctrl.svg" id="21_2f3hp"]
+[ext_resource type="Texture2D" uid="uid://vprh704ldlty" path="res://addons/inputty/Display/IconTextures/key_alt.svg" id="22_pgiif"]
+[ext_resource type="Texture2D" uid="uid://cxpuyuq56sdr2" path="res://addons/inputty/Display/IconTextures/key_caps.svg" id="23_46iih"]
+[ext_resource type="Texture2D" uid="uid://wcccwdhxbt1j" path="res://addons/inputty/Display/IconTextures/key_num.svg" id="24_ox3xc"]
+[ext_resource type="Texture2D" uid="uid://dfhwfj35dtqfq" path="res://addons/inputty/Display/IconTextures/key_scroll.svg" id="25_iyenw"]
+[ext_resource type="Texture2D" uid="uid://7jaun0apij7q" path="res://addons/inputty/Display/IconTextures/key_f1.svg" id="26_8wiga"]
+[ext_resource type="Texture2D" uid="uid://b0emqng7d7svr" path="res://addons/inputty/Display/IconTextures/key_f2.svg" id="27_i0kiw"]
+[ext_resource type="Texture2D" uid="uid://cjh8w0hkk7hek" path="res://addons/inputty/Display/IconTextures/key_f3.svg" id="28_j3rw5"]
+[ext_resource type="Texture2D" uid="uid://rbwsstg5t21h" path="res://addons/inputty/Display/IconTextures/key_f4.svg" id="29_vf5q8"]
+[ext_resource type="Texture2D" uid="uid://yewx5q7stf1w" path="res://addons/inputty/Display/IconTextures/key_f5.svg" id="30_uxr06"]
+[ext_resource type="Texture2D" uid="uid://dntg34iy025qj" path="res://addons/inputty/Display/IconTextures/key_f6.svg" id="31_u0eti"]
+[ext_resource type="Texture2D" uid="uid://c4cslhmtpfy3o" path="res://addons/inputty/Display/IconTextures/key_f7.svg" id="32_di204"]
+[ext_resource type="Texture2D" uid="uid://dclqj4myxqgai" path="res://addons/inputty/Display/IconTextures/key_f8.svg" id="33_sarvk"]
+[ext_resource type="Texture2D" uid="uid://ivr663pxk56v" path="res://addons/inputty/Display/IconTextures/key_f9.svg" id="34_yt0d8"]
+[ext_resource type="Texture2D" uid="uid://c7ryqbmwudkee" path="res://addons/inputty/Display/IconTextures/key_f10.svg" id="35_iil4t"]
+[ext_resource type="Texture2D" uid="uid://35b6wa5j4mrg" path="res://addons/inputty/Display/IconTextures/key_f11.svg" id="36_1qxbu"]
+[ext_resource type="Texture2D" uid="uid://82f6aprwxomj" path="res://addons/inputty/Display/IconTextures/key_f12.svg" id="37_uoqxl"]
+[ext_resource type="Texture2D" uid="uid://ng5eabutwa6b" path="res://addons/inputty/Display/IconTextures/key_asterisk.svg" id="38_6ban2"]
+[ext_resource type="Texture2D" uid="uid://b1f0ww32112dh" path="res://addons/inputty/Display/IconTextures/key_slash.svg" id="39_800f0"]
+[ext_resource type="Texture2D" uid="uid://drk0e7f716f36" path="res://addons/inputty/Display/IconTextures/key_minus.svg" id="40_re5gy"]
+[ext_resource type="Texture2D" uid="uid://df1loim4g3d1f" path="res://addons/inputty/Display/IconTextures/key_period.svg" id="41_umm5h"]
+[ext_resource type="Texture2D" uid="uid://b1kwhdvxsw0vu" path="res://addons/inputty/Display/IconTextures/key_kp_plus.svg" id="42_jpjqy"]
+[ext_resource type="Texture2D" uid="uid://c0i6o0xc1pbfp" path="res://addons/inputty/Display/IconTextures/key_0.svg" id="43_r6pqb"]
+[ext_resource type="Texture2D" uid="uid://e1j8d8rprlxm" path="res://addons/inputty/Display/IconTextures/key_1.svg" id="44_mgbw2"]
+[ext_resource type="Texture2D" uid="uid://ccsl14p6per7t" path="res://addons/inputty/Display/IconTextures/key_2.svg" id="45_pcitq"]
+[ext_resource type="Texture2D" uid="uid://sgvqx7ljtt2c" path="res://addons/inputty/Display/IconTextures/key_3.svg" id="46_uxrie"]
+[ext_resource type="Texture2D" uid="uid://cggc8xqlkouwd" path="res://addons/inputty/Display/IconTextures/key_4.svg" id="47_f1bs4"]
+[ext_resource type="Texture2D" uid="uid://ib5iplg8653s" path="res://addons/inputty/Display/IconTextures/key_5.svg" id="48_kbxhe"]
+[ext_resource type="Texture2D" uid="uid://fxynyywgfeqi" path="res://addons/inputty/Display/IconTextures/key_6.svg" id="49_t0th6"]
+[ext_resource type="Texture2D" uid="uid://bqb0860nnl8tl" path="res://addons/inputty/Display/IconTextures/key_7.svg" id="50_i7sph"]
+[ext_resource type="Texture2D" uid="uid://dfk04au0wcupn" path="res://addons/inputty/Display/IconTextures/key_8.svg" id="51_i27dk"]
+[ext_resource type="Texture2D" uid="uid://dh23l1eeudtl5" path="res://addons/inputty/Display/IconTextures/key_9.svg" id="52_qs6ln"]
+[ext_resource type="Texture2D" uid="uid://ds2454xf42h7s" path="res://addons/inputty/Display/IconTextures/key_menu.svg" id="53_kgg1l"]
+[ext_resource type="Texture2D" uid="uid://bphdinlmax75k" path="res://addons/inputty/Display/IconTextures/key_space.svg" id="54_wlkuv"]
+[ext_resource type="Texture2D" uid="uid://b8oen4d2ykeqo" path="res://addons/inputty/Display/IconTextures/key_exclaim.svg" id="55_h0wsf"]
+[ext_resource type="Texture2D" uid="uid://cys5vx56hugw8" path="res://addons/inputty/Display/IconTextures/key_quote.svg" id="56_r7a73"]
+[ext_resource type="Texture2D" uid="uid://b3srn2dvfu7yc" path="res://addons/inputty/Display/IconTextures/key_hash.svg" id="57_shy5f"]
+[ext_resource type="Texture2D" uid="uid://ch8o4hvwkdrlo" path="res://addons/inputty/Display/IconTextures/key_dollar.svg" id="58_a7ynw"]
+[ext_resource type="Texture2D" uid="uid://di7caajsbgkwf" path="res://addons/inputty/Display/IconTextures/key_amp.svg" id="59_8kbt5"]
+[ext_resource type="Texture2D" uid="uid://d2ma2am6yiqvu" path="res://addons/inputty/Display/IconTextures/key_apos.svg" id="60_wlcvr"]
+[ext_resource type="Texture2D" uid="uid://b7yv8rnel0wym" path="res://addons/inputty/Display/IconTextures/key_parenopen.svg" id="61_kyc2r"]
+[ext_resource type="Texture2D" uid="uid://bjli3n2vn1rak" path="res://addons/inputty/Display/IconTextures/key_parenclose.svg" id="62_i5dqv"]
+[ext_resource type="Texture2D" uid="uid://ciuchjbvnwwvm" path="res://addons/inputty/Display/IconTextures/key_plus.svg" id="63_go112"]
+[ext_resource type="Texture2D" uid="uid://3q3lv8ox7n4k" path="res://addons/inputty/Display/IconTextures/key_comma.svg" id="64_2scv7"]
+[ext_resource type="Texture2D" uid="uid://lin4jxwfp0n" path="res://addons/inputty/Display/IconTextures/key_colon.svg" id="65_4eo2g"]
+[ext_resource type="Texture2D" uid="uid://cgjrwlgcm8uq0" path="res://addons/inputty/Display/IconTextures/key_semicolon.svg" id="66_3udgw"]
+[ext_resource type="Texture2D" uid="uid://cscogdjciaenx" path="res://addons/inputty/Display/IconTextures/key_less.svg" id="67_6wdiv"]
+[ext_resource type="Texture2D" uid="uid://c64mkhalqkrwn" path="res://addons/inputty/Display/IconTextures/key_equal.svg" id="68_uo5em"]
+[ext_resource type="Texture2D" uid="uid://mplwk7kaot1j" path="res://addons/inputty/Display/IconTextures/key_greater.svg" id="69_t8vtn"]
+[ext_resource type="Texture2D" uid="uid://h7tk0yoawctq" path="res://addons/inputty/Display/IconTextures/key_question.svg" id="70_lkgid"]
+[ext_resource type="Texture2D" uid="uid://d4b0datfenrur" path="res://addons/inputty/Display/IconTextures/key_at.svg" id="71_mf7h4"]
+[ext_resource type="Texture2D" uid="uid://oqii6rpsvvwn" path="res://addons/inputty/Display/IconTextures/key_A.svg" id="72_jal0d"]
+[ext_resource type="Texture2D" uid="uid://df55idww32si1" path="res://addons/inputty/Display/IconTextures/key_B.svg" id="73_rbvyi"]
+[ext_resource type="Texture2D" uid="uid://btbwe8e3sc7sp" path="res://addons/inputty/Display/IconTextures/key_C.svg" id="74_2sn51"]
+[ext_resource type="Texture2D" uid="uid://ductpvpdih12d" path="res://addons/inputty/Display/IconTextures/key_D.svg" id="75_b45do"]
+[ext_resource type="Texture2D" uid="uid://c5sb8o54ggmsx" path="res://addons/inputty/Display/IconTextures/key_E.svg" id="76_qv7h8"]
+[ext_resource type="Texture2D" uid="uid://cd4j7h6axirad" path="res://addons/inputty/Display/IconTextures/key_F.svg" id="77_vtuwo"]
+[ext_resource type="Texture2D" uid="uid://biuthfnwsyvx6" path="res://addons/inputty/Display/IconTextures/key_G.svg" id="78_yqvim"]
+[ext_resource type="Texture2D" uid="uid://b6o8rewei6vux" path="res://addons/inputty/Display/IconTextures/key_H.svg" id="79_tijxt"]
+[ext_resource type="Texture2D" uid="uid://br3tgm61w6kl6" path="res://addons/inputty/Display/IconTextures/key_I.svg" id="80_pp70v"]
+[ext_resource type="Texture2D" uid="uid://blt30wa4ctj0g" path="res://addons/inputty/Display/IconTextures/key_J.svg" id="81_pvrxp"]
+[ext_resource type="Texture2D" uid="uid://d4nwt3lumx43i" path="res://addons/inputty/Display/IconTextures/key_K.svg" id="82_ecj1q"]
+[ext_resource type="Texture2D" uid="uid://b083eppwq8gef" path="res://addons/inputty/Display/IconTextures/key_L.svg" id="83_djc7k"]
+[ext_resource type="Texture2D" uid="uid://bwavxfsjcumw4" path="res://addons/inputty/Display/IconTextures/key_M.svg" id="84_op1wu"]
+[ext_resource type="Texture2D" uid="uid://dtaqsqiljpiqj" path="res://addons/inputty/Display/IconTextures/key_N.svg" id="85_gbw7g"]
+[ext_resource type="Texture2D" uid="uid://ccy3na8vxv1gi" path="res://addons/inputty/Display/IconTextures/key_O.svg" id="86_pwbaq"]
+[ext_resource type="Texture2D" uid="uid://clgjav1recubh" path="res://addons/inputty/Display/IconTextures/key_P.svg" id="87_g6ft7"]
+[ext_resource type="Texture2D" uid="uid://ctgwdpounux55" path="res://addons/inputty/Display/IconTextures/key_Q.svg" id="88_cq2gp"]
+[ext_resource type="Texture2D" uid="uid://b3yr8leelsni" path="res://addons/inputty/Display/IconTextures/key_R.svg" id="89_vlxk2"]
+[ext_resource type="Texture2D" uid="uid://ceacwmydo2d05" path="res://addons/inputty/Display/IconTextures/key_S.svg" id="90_6ptaj"]
+[ext_resource type="Texture2D" uid="uid://brikuobtdffbs" path="res://addons/inputty/Display/IconTextures/key_T.svg" id="91_otl2c"]
+[ext_resource type="Texture2D" uid="uid://7je5u2kcy5jy" path="res://addons/inputty/Display/IconTextures/key_U.svg" id="92_bplu5"]
+[ext_resource type="Texture2D" uid="uid://dupmy6u5jebpe" path="res://addons/inputty/Display/IconTextures/key_V.svg" id="93_xn4og"]
+[ext_resource type="Texture2D" uid="uid://c1s14411oithk" path="res://addons/inputty/Display/IconTextures/key_W.svg" id="94_x3agl"]
+[ext_resource type="Texture2D" uid="uid://tcbjdmnvcfmx" path="res://addons/inputty/Display/IconTextures/key_X.svg" id="95_6vsf3"]
+[ext_resource type="Texture2D" uid="uid://chvr5wv06nal7" path="res://addons/inputty/Display/IconTextures/key_Y.svg" id="96_tqkd2"]
+[ext_resource type="Texture2D" uid="uid://854bieui0ajg" path="res://addons/inputty/Display/IconTextures/key_Z.svg" id="97_51ljd"]
+[ext_resource type="Texture2D" uid="uid://fy1s7l1w3un8" path="res://addons/inputty/Display/IconTextures/key_bracketopen.svg" id="98_fs8uu"]
+[ext_resource type="Texture2D" uid="uid://dbx6khmnbjw30" path="res://addons/inputty/Display/IconTextures/key_backslash.svg" id="99_ni0jw"]
+[ext_resource type="Texture2D" uid="uid://doh7ny6y171b6" path="res://addons/inputty/Display/IconTextures/key_bracketclose.svg" id="100_nfmgq"]
+[ext_resource type="Texture2D" uid="uid://d1qh26w7l0wva" path="res://addons/inputty/Display/IconTextures/key_hat.svg" id="101_xr1j4"]
+[ext_resource type="Texture2D" uid="uid://bd6ji84a1ry3s" path="res://addons/inputty/Display/IconTextures/key_underscore.svg" id="102_ykq0v"]
+[ext_resource type="Texture2D" uid="uid://drw4imroajj00" path="res://addons/inputty/Display/IconTextures/key_backtick.svg" id="103_gt8lo"]
+[ext_resource type="Texture2D" uid="uid://cwrxfxuc5ssvu" path="res://addons/inputty/Display/IconTextures/key_braceopen.svg" id="104_yv5bp"]
+[ext_resource type="Texture2D" uid="uid://ydg0iucjsfp7" path="res://addons/inputty/Display/IconTextures/key_bar.svg" id="105_1vwav"]
+[ext_resource type="Texture2D" uid="uid://o7p43iqnq8p7" path="res://addons/inputty/Display/IconTextures/key_braceclose.svg" id="106_komws"]
+[ext_resource type="Texture2D" uid="uid://cgxuy8j5ahiwt" path="res://addons/inputty/Display/IconTextures/key_tilde.svg" id="107_1up4w"]
+[ext_resource type="Texture2D" uid="uid://4ukppx07c7q0" path="res://addons/inputty/Display/IconTextures/key_yen.svg" id="108_o4gjb"]
+[ext_resource type="Texture2D" uid="uid://d0gdffy51urub" path="res://addons/inputty/Display/IconTextures/key_section.svg" id="109_ou7tb"]
+
+[sub_resource type="Resource" id="Resource_arwwp"]
+script = ExtResource("1_8u7sa")
+enumIndex = 0
+name = "Key"
+texture = ExtResource("2_dwtnn")
+
+[sub_resource type="Resource" id="Resource_oomju"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194305
+name = "Escape"
+texture = ExtResource("3_pjsbo")
+
+[sub_resource type="Resource" id="Resource_dv8ek"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194306
+name = "Tab"
+texture = ExtResource("4_ddowr")
+
+[sub_resource type="Resource" id="Resource_y4xwu"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194308
+name = "Backspace"
+texture = ExtResource("5_n0rjf")
+
+[sub_resource type="Resource" id="Resource_ivw47"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194309
+name = "Enter"
+texture = ExtResource("6_0hbno")
+
+[sub_resource type="Resource" id="Resource_v7nia"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194310
+name = "KP Enter"
+texture = ExtResource("7_02m1h")
+
+[sub_resource type="Resource" id="Resource_fjg4f"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194311
+name = "Insert"
+texture = ExtResource("8_ji8sn")
+
+[sub_resource type="Resource" id="Resource_mvrve"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194312
+name = "Delete"
+texture = ExtResource("9_wctqx")
+
+[sub_resource type="Resource" id="Resource_4eudy"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194313
+name = "Pause"
+texture = ExtResource("10_died6")
+
+[sub_resource type="Resource" id="Resource_5nemi"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194314
+name = "Print Screen"
+texture = ExtResource("11_116tu")
+
+[sub_resource type="Resource" id="Resource_qvdmt"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194317
+name = "Home"
+texture = ExtResource("12_pq1gi")
+
+[sub_resource type="Resource" id="Resource_deyoo"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194318
+name = "End"
+texture = ExtResource("13_un1h2")
+
+[sub_resource type="Resource" id="Resource_v3vi7"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194319
+name = "Left"
+texture = ExtResource("14_61qq3")
+
+[sub_resource type="Resource" id="Resource_2olyy"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194320
+name = "Up"
+texture = ExtResource("15_dkjcs")
+
+[sub_resource type="Resource" id="Resource_ja5ib"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194321
+name = "Right"
+texture = ExtResource("16_g368b")
+
+[sub_resource type="Resource" id="Resource_vnjh8"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194322
+name = "Down"
+texture = ExtResource("17_vmipv")
+
+[sub_resource type="Resource" id="Resource_avrgl"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194323
+name = "Page Up"
+texture = ExtResource("18_1riae")
+
+[sub_resource type="Resource" id="Resource_l5qnb"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194324
+name = "Page Down"
+texture = ExtResource("19_p1gko")
+
+[sub_resource type="Resource" id="Resource_dgtsj"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194325
+name = "Shift"
+texture = ExtResource("20_2ifyx")
+
+[sub_resource type="Resource" id="Resource_ae1rj"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194326
+name = "Control"
+texture = ExtResource("21_2f3hp")
+
+[sub_resource type="Resource" id="Resource_wmefv"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194328
+name = "Alt"
+texture = ExtResource("22_pgiif")
+
+[sub_resource type="Resource" id="Resource_wpcvh"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194329
+name = "Caps Lock"
+texture = ExtResource("23_46iih")
+
+[sub_resource type="Resource" id="Resource_8yul5"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194330
+name = "Num Lock"
+texture = ExtResource("24_ox3xc")
+
+[sub_resource type="Resource" id="Resource_kukoc"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194331
+name = "Scroll Lock"
+texture = ExtResource("25_iyenw")
+
+[sub_resource type="Resource" id="Resource_dgt25"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194332
+name = "F1"
+texture = ExtResource("26_8wiga")
+
+[sub_resource type="Resource" id="Resource_iej73"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194333
+name = "F2"
+texture = ExtResource("27_i0kiw")
+
+[sub_resource type="Resource" id="Resource_y3kqr"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194334
+name = "F3"
+texture = ExtResource("28_j3rw5")
+
+[sub_resource type="Resource" id="Resource_lgkw8"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194335
+name = "F4"
+texture = ExtResource("29_vf5q8")
+
+[sub_resource type="Resource" id="Resource_e02fs"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194336
+name = "F5"
+texture = ExtResource("30_uxr06")
+
+[sub_resource type="Resource" id="Resource_4l2rm"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194337
+name = "F6"
+texture = ExtResource("31_u0eti")
+
+[sub_resource type="Resource" id="Resource_ed1cn"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194338
+name = "F7"
+texture = ExtResource("32_di204")
+
+[sub_resource type="Resource" id="Resource_5bob5"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194339
+name = "F8"
+texture = ExtResource("33_sarvk")
+
+[sub_resource type="Resource" id="Resource_xfjyr"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194340
+name = "F9"
+texture = ExtResource("34_yt0d8")
+
+[sub_resource type="Resource" id="Resource_xvnot"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194341
+name = "F10"
+texture = ExtResource("35_iil4t")
+
+[sub_resource type="Resource" id="Resource_v004a"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194342
+name = "F11"
+texture = ExtResource("36_1qxbu")
+
+[sub_resource type="Resource" id="Resource_82p4b"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194343
+name = "F12"
+texture = ExtResource("37_uoqxl")
+
+[sub_resource type="Resource" id="Resource_fubip"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194433
+name = "KP *"
+texture = ExtResource("38_6ban2")
+
+[sub_resource type="Resource" id="Resource_ktr6f"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194434
+name = "KP /"
+texture = ExtResource("39_800f0")
+
+[sub_resource type="Resource" id="Resource_vydxy"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194435
+name = "KP -"
+texture = ExtResource("40_re5gy")
+
+[sub_resource type="Resource" id="Resource_5dxu5"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194436
+name = "KP ."
+texture = ExtResource("41_umm5h")
+
+[sub_resource type="Resource" id="Resource_vgxbl"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194437
+name = "KP +"
+texture = ExtResource("42_jpjqy")
+
+[sub_resource type="Resource" id="Resource_3u0uu"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194438
+name = "KP 0"
+texture = ExtResource("43_r6pqb")
+
+[sub_resource type="Resource" id="Resource_lajpx"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194439
+name = "KP 1"
+texture = ExtResource("44_mgbw2")
+
+[sub_resource type="Resource" id="Resource_8t7si"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194440
+name = "KP 2"
+texture = ExtResource("45_pcitq")
+
+[sub_resource type="Resource" id="Resource_c2cjo"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194441
+name = "KP 3"
+texture = ExtResource("46_uxrie")
+
+[sub_resource type="Resource" id="Resource_nsgca"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194442
+name = "KP 4"
+texture = ExtResource("47_f1bs4")
+
+[sub_resource type="Resource" id="Resource_4dof6"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194443
+name = "KP 5"
+texture = ExtResource("48_kbxhe")
+
+[sub_resource type="Resource" id="Resource_jpvid"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194444
+name = "KP 6"
+texture = ExtResource("49_t0th6")
+
+[sub_resource type="Resource" id="Resource_f34x6"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194445
+name = "KP 7"
+texture = ExtResource("50_i7sph")
+
+[sub_resource type="Resource" id="Resource_vcbym"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194446
+name = "KP 8"
+texture = ExtResource("51_i27dk")
+
+[sub_resource type="Resource" id="Resource_0ivi7"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194447
+name = "KP 9"
+texture = ExtResource("52_qs6ln")
+
+[sub_resource type="Resource" id="Resource_pa1gy"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4194370
+name = "Context Menu"
+texture = ExtResource("53_kgg1l")
+
+[sub_resource type="Resource" id="Resource_irmjy"]
+script = ExtResource("1_8u7sa")
+enumIndex = 8388607
+name = "Unknown Key"
+texture = ExtResource("2_dwtnn")
+
+[sub_resource type="Resource" id="Resource_ucnqk"]
+script = ExtResource("1_8u7sa")
+enumIndex = 32
+name = "Space"
+texture = ExtResource("54_wlkuv")
+
+[sub_resource type="Resource" id="Resource_2obor"]
+script = ExtResource("1_8u7sa")
+enumIndex = 33
+name = "!"
+texture = ExtResource("55_h0wsf")
+
+[sub_resource type="Resource" id="Resource_3pevr"]
+script = ExtResource("1_8u7sa")
+enumIndex = 34
+name = "\""
+texture = ExtResource("56_r7a73")
+
+[sub_resource type="Resource" id="Resource_11p3s"]
+script = ExtResource("1_8u7sa")
+enumIndex = 35
+name = "#"
+texture = ExtResource("57_shy5f")
+
+[sub_resource type="Resource" id="Resource_df81w"]
+script = ExtResource("1_8u7sa")
+enumIndex = 36
+name = "$"
+texture = ExtResource("58_a7ynw")
+
+[sub_resource type="Resource" id="Resource_wip78"]
+script = ExtResource("1_8u7sa")
+enumIndex = 37
+name = "%"
+
+[sub_resource type="Resource" id="Resource_kk7dl"]
+script = ExtResource("1_8u7sa")
+enumIndex = 38
+name = "&"
+texture = ExtResource("59_8kbt5")
+
+[sub_resource type="Resource" id="Resource_fitg4"]
+script = ExtResource("1_8u7sa")
+enumIndex = 39
+name = "'"
+texture = ExtResource("60_wlcvr")
+
+[sub_resource type="Resource" id="Resource_sl8xi"]
+script = ExtResource("1_8u7sa")
+enumIndex = 40
+name = "("
+texture = ExtResource("61_kyc2r")
+
+[sub_resource type="Resource" id="Resource_yoh8h"]
+script = ExtResource("1_8u7sa")
+enumIndex = 41
+name = ")"
+texture = ExtResource("62_i5dqv")
+
+[sub_resource type="Resource" id="Resource_sb6it"]
+script = ExtResource("1_8u7sa")
+enumIndex = 42
+name = "*"
+texture = ExtResource("38_6ban2")
+
+[sub_resource type="Resource" id="Resource_odmlk"]
+script = ExtResource("1_8u7sa")
+enumIndex = 43
+name = "+"
+texture = ExtResource("63_go112")
+
+[sub_resource type="Resource" id="Resource_hlqrk"]
+script = ExtResource("1_8u7sa")
+enumIndex = 44
+name = ","
+texture = ExtResource("64_2scv7")
+
+[sub_resource type="Resource" id="Resource_qvbyv"]
+script = ExtResource("1_8u7sa")
+enumIndex = 45
+name = "-"
+texture = ExtResource("40_re5gy")
+
+[sub_resource type="Resource" id="Resource_wjnp5"]
+script = ExtResource("1_8u7sa")
+enumIndex = 46
+name = "."
+texture = ExtResource("41_umm5h")
+
+[sub_resource type="Resource" id="Resource_hsa6c"]
+script = ExtResource("1_8u7sa")
+enumIndex = 47
+name = "/"
+texture = ExtResource("39_800f0")
+
+[sub_resource type="Resource" id="Resource_6o7jp"]
+script = ExtResource("1_8u7sa")
+enumIndex = 48
+name = "0"
+texture = ExtResource("43_r6pqb")
+
+[sub_resource type="Resource" id="Resource_fl76v"]
+script = ExtResource("1_8u7sa")
+enumIndex = 49
+name = "1"
+texture = ExtResource("44_mgbw2")
+
+[sub_resource type="Resource" id="Resource_hegig"]
+script = ExtResource("1_8u7sa")
+enumIndex = 50
+name = "2"
+texture = ExtResource("45_pcitq")
+
+[sub_resource type="Resource" id="Resource_3l8dh"]
+script = ExtResource("1_8u7sa")
+enumIndex = 51
+name = "3"
+texture = ExtResource("46_uxrie")
+
+[sub_resource type="Resource" id="Resource_kevjm"]
+script = ExtResource("1_8u7sa")
+enumIndex = 52
+name = "4"
+texture = ExtResource("47_f1bs4")
+
+[sub_resource type="Resource" id="Resource_02kuk"]
+script = ExtResource("1_8u7sa")
+enumIndex = 53
+name = "5"
+texture = ExtResource("48_kbxhe")
+
+[sub_resource type="Resource" id="Resource_easma"]
+script = ExtResource("1_8u7sa")
+enumIndex = 54
+name = "6"
+texture = ExtResource("49_t0th6")
+
+[sub_resource type="Resource" id="Resource_1nmok"]
+script = ExtResource("1_8u7sa")
+enumIndex = 55
+name = "7"
+texture = ExtResource("50_i7sph")
+
+[sub_resource type="Resource" id="Resource_ci001"]
+script = ExtResource("1_8u7sa")
+enumIndex = 56
+name = "8"
+texture = ExtResource("51_i27dk")
+
+[sub_resource type="Resource" id="Resource_y4ujm"]
+script = ExtResource("1_8u7sa")
+enumIndex = 57
+name = "9"
+texture = ExtResource("52_qs6ln")
+
+[sub_resource type="Resource" id="Resource_3sc6r"]
+script = ExtResource("1_8u7sa")
+enumIndex = 58
+name = ":"
+texture = ExtResource("65_4eo2g")
+
+[sub_resource type="Resource" id="Resource_2sq6n"]
+script = ExtResource("1_8u7sa")
+enumIndex = 59
+name = ";"
+texture = ExtResource("66_3udgw")
+
+[sub_resource type="Resource" id="Resource_3fo1m"]
+script = ExtResource("1_8u7sa")
+enumIndex = 60
+name = "<"
+texture = ExtResource("67_6wdiv")
+
+[sub_resource type="Resource" id="Resource_5367e"]
+script = ExtResource("1_8u7sa")
+enumIndex = 61
+name = "="
+texture = ExtResource("68_uo5em")
+
+[sub_resource type="Resource" id="Resource_i8oqp"]
+script = ExtResource("1_8u7sa")
+enumIndex = 62
+name = ">"
+texture = ExtResource("69_t8vtn")
+
+[sub_resource type="Resource" id="Resource_4hk1b"]
+script = ExtResource("1_8u7sa")
+enumIndex = 63
+name = "?"
+texture = ExtResource("70_lkgid")
+
+[sub_resource type="Resource" id="Resource_6qqpq"]
+script = ExtResource("1_8u7sa")
+enumIndex = 64
+name = "@"
+texture = ExtResource("71_mf7h4")
+
+[sub_resource type="Resource" id="Resource_w0jsv"]
+script = ExtResource("1_8u7sa")
+enumIndex = 65
+name = "A"
+texture = ExtResource("72_jal0d")
+
+[sub_resource type="Resource" id="Resource_1ktdq"]
+script = ExtResource("1_8u7sa")
+enumIndex = 66
+name = "B"
+texture = ExtResource("73_rbvyi")
+
+[sub_resource type="Resource" id="Resource_ump3a"]
+script = ExtResource("1_8u7sa")
+enumIndex = 67
+name = "C"
+texture = ExtResource("74_2sn51")
+
+[sub_resource type="Resource" id="Resource_qt4h7"]
+script = ExtResource("1_8u7sa")
+enumIndex = 68
+name = "D"
+texture = ExtResource("75_b45do")
+
+[sub_resource type="Resource" id="Resource_0a73l"]
+script = ExtResource("1_8u7sa")
+enumIndex = 69
+name = "E"
+texture = ExtResource("76_qv7h8")
+
+[sub_resource type="Resource" id="Resource_1l60m"]
+script = ExtResource("1_8u7sa")
+enumIndex = 70
+name = "F"
+texture = ExtResource("77_vtuwo")
+
+[sub_resource type="Resource" id="Resource_c2jbx"]
+script = ExtResource("1_8u7sa")
+enumIndex = 71
+name = "G"
+texture = ExtResource("78_yqvim")
+
+[sub_resource type="Resource" id="Resource_04710"]
+script = ExtResource("1_8u7sa")
+enumIndex = 72
+name = "H"
+texture = ExtResource("79_tijxt")
+
+[sub_resource type="Resource" id="Resource_7o3bh"]
+script = ExtResource("1_8u7sa")
+enumIndex = 73
+name = "I"
+texture = ExtResource("80_pp70v")
+
+[sub_resource type="Resource" id="Resource_fwji8"]
+script = ExtResource("1_8u7sa")
+enumIndex = 74
+name = "J"
+texture = ExtResource("81_pvrxp")
+
+[sub_resource type="Resource" id="Resource_qplv4"]
+script = ExtResource("1_8u7sa")
+enumIndex = 75
+name = "K"
+texture = ExtResource("82_ecj1q")
+
+[sub_resource type="Resource" id="Resource_i3yta"]
+script = ExtResource("1_8u7sa")
+enumIndex = 76
+name = "L"
+texture = ExtResource("83_djc7k")
+
+[sub_resource type="Resource" id="Resource_4h85u"]
+script = ExtResource("1_8u7sa")
+enumIndex = 77
+name = "M"
+texture = ExtResource("84_op1wu")
+
+[sub_resource type="Resource" id="Resource_kcmmb"]
+script = ExtResource("1_8u7sa")
+enumIndex = 78
+name = "N"
+texture = ExtResource("85_gbw7g")
+
+[sub_resource type="Resource" id="Resource_ml7ex"]
+script = ExtResource("1_8u7sa")
+enumIndex = 79
+name = "O"
+texture = ExtResource("86_pwbaq")
+
+[sub_resource type="Resource" id="Resource_rhqg7"]
+script = ExtResource("1_8u7sa")
+enumIndex = 80
+name = "P"
+texture = ExtResource("87_g6ft7")
+
+[sub_resource type="Resource" id="Resource_repg2"]
+script = ExtResource("1_8u7sa")
+enumIndex = 81
+name = "Q"
+texture = ExtResource("88_cq2gp")
+
+[sub_resource type="Resource" id="Resource_lbto6"]
+script = ExtResource("1_8u7sa")
+enumIndex = 82
+name = "R"
+texture = ExtResource("89_vlxk2")
+
+[sub_resource type="Resource" id="Resource_tqd8y"]
+script = ExtResource("1_8u7sa")
+enumIndex = 83
+name = "S"
+texture = ExtResource("90_6ptaj")
+
+[sub_resource type="Resource" id="Resource_2jdtw"]
+script = ExtResource("1_8u7sa")
+enumIndex = 84
+name = "T"
+texture = ExtResource("91_otl2c")
+
+[sub_resource type="Resource" id="Resource_yfnid"]
+script = ExtResource("1_8u7sa")
+enumIndex = 85
+name = "U"
+texture = ExtResource("92_bplu5")
+
+[sub_resource type="Resource" id="Resource_bc0hc"]
+script = ExtResource("1_8u7sa")
+enumIndex = 86
+name = "V"
+texture = ExtResource("93_xn4og")
+
+[sub_resource type="Resource" id="Resource_70jy4"]
+script = ExtResource("1_8u7sa")
+enumIndex = 87
+name = "W"
+texture = ExtResource("94_x3agl")
+
+[sub_resource type="Resource" id="Resource_8gr5o"]
+script = ExtResource("1_8u7sa")
+enumIndex = 88
+name = "X"
+texture = ExtResource("95_6vsf3")
+
+[sub_resource type="Resource" id="Resource_8kb4i"]
+script = ExtResource("1_8u7sa")
+enumIndex = 89
+name = "Y"
+texture = ExtResource("96_tqkd2")
+
+[sub_resource type="Resource" id="Resource_xggol"]
+script = ExtResource("1_8u7sa")
+enumIndex = 90
+name = "Z"
+texture = ExtResource("97_51ljd")
+
+[sub_resource type="Resource" id="Resource_4anao"]
+script = ExtResource("1_8u7sa")
+enumIndex = 91
+name = "["
+texture = ExtResource("98_fs8uu")
+
+[sub_resource type="Resource" id="Resource_awyke"]
+script = ExtResource("1_8u7sa")
+enumIndex = 92
+name = "\\"
+texture = ExtResource("99_ni0jw")
+
+[sub_resource type="Resource" id="Resource_u4dbw"]
+script = ExtResource("1_8u7sa")
+enumIndex = 93
+name = "]"
+texture = ExtResource("100_nfmgq")
+
+[sub_resource type="Resource" id="Resource_lowp0"]
+script = ExtResource("1_8u7sa")
+enumIndex = 94
+name = "^"
+texture = ExtResource("101_xr1j4")
+
+[sub_resource type="Resource" id="Resource_53u84"]
+script = ExtResource("1_8u7sa")
+enumIndex = 95
+name = "_"
+texture = ExtResource("102_ykq0v")
+
+[sub_resource type="Resource" id="Resource_4pvtl"]
+script = ExtResource("1_8u7sa")
+enumIndex = 96
+name = "`"
+texture = ExtResource("103_gt8lo")
+
+[sub_resource type="Resource" id="Resource_kam4o"]
+script = ExtResource("1_8u7sa")
+enumIndex = 123
+name = "{"
+texture = ExtResource("104_yv5bp")
+
+[sub_resource type="Resource" id="Resource_cfhho"]
+script = ExtResource("1_8u7sa")
+enumIndex = 124
+name = "|"
+texture = ExtResource("105_1vwav")
+
+[sub_resource type="Resource" id="Resource_r51r5"]
+script = ExtResource("1_8u7sa")
+enumIndex = 125
+name = "}"
+texture = ExtResource("106_komws")
+
+[sub_resource type="Resource" id="Resource_wn2pl"]
+script = ExtResource("1_8u7sa")
+enumIndex = 126
+name = "~"
+texture = ExtResource("107_1up4w")
+
+[sub_resource type="Resource" id="Resource_wry22"]
+script = ExtResource("1_8u7sa")
+enumIndex = 165
+name = "￥"
+texture = ExtResource("108_o4gjb")
+
+[sub_resource type="Resource" id="Resource_23ud3"]
+script = ExtResource("1_8u7sa")
+enumIndex = 167
+name = "§"
+texture = ExtResource("109_ou7tb")
+
+[sub_resource type="Resource" id="Resource_anwl3"]
+script = ExtResource("1_8u7sa")
+enumIndex = 0
+name = "Mouse"
+
+[sub_resource type="Resource" id="Resource_5mtfd"]
+script = ExtResource("1_8u7sa")
+enumIndex = 1
+name = "Left Mouse"
+texture = ExtResource("2_8mby8")
+
+[sub_resource type="Resource" id="Resource_f5hd3"]
+script = ExtResource("1_8u7sa")
+enumIndex = 2
+name = "Right Mouse"
+texture = ExtResource("3_mcdda")
+
+[sub_resource type="Resource" id="Resource_skk38"]
+script = ExtResource("1_8u7sa")
+enumIndex = 3
+name = "Middle Mouse"
+texture = ExtResource("4_trtoo")
+
+[sub_resource type="Resource" id="Resource_uo5fr"]
+script = ExtResource("1_8u7sa")
+enumIndex = 4
+name = "Mouse Wheel Up"
+texture = ExtResource("5_jsjvb")
+
+[sub_resource type="Resource" id="Resource_vlm7s"]
+script = ExtResource("1_8u7sa")
+enumIndex = 5
+name = "Mouse Wheel Down"
+texture = ExtResource("6_vl5jp")
+
+[sub_resource type="Resource" id="Resource_8u7yb"]
+script = ExtResource("1_8u7sa")
+enumIndex = 6
+name = "Mouse Wheel Left"
+texture = ExtResource("7_v0xeq")
+
+[sub_resource type="Resource" id="Resource_76g7w"]
+script = ExtResource("1_8u7sa")
+enumIndex = 7
+name = "Mouse Wheel Right"
+texture = ExtResource("8_42r4i")
+
+[resource]
+script = ExtResource("9_7w0vf")
+name = "Keyboard and Mouse"
+keyboardDisplays = Array[ExtResource("1_8u7sa")]([SubResource("Resource_arwwp"), SubResource("Resource_oomju"), SubResource("Resource_dv8ek"), SubResource("Resource_y4xwu"), SubResource("Resource_ivw47"), SubResource("Resource_v7nia"), SubResource("Resource_fjg4f"), SubResource("Resource_mvrve"), SubResource("Resource_4eudy"), SubResource("Resource_5nemi"), SubResource("Resource_qvdmt"), SubResource("Resource_deyoo"), SubResource("Resource_v3vi7"), SubResource("Resource_2olyy"), SubResource("Resource_ja5ib"), SubResource("Resource_vnjh8"), SubResource("Resource_avrgl"), SubResource("Resource_l5qnb"), SubResource("Resource_dgtsj"), SubResource("Resource_ae1rj"), SubResource("Resource_wmefv"), SubResource("Resource_wpcvh"), SubResource("Resource_8yul5"), SubResource("Resource_kukoc"), SubResource("Resource_dgt25"), SubResource("Resource_iej73"), SubResource("Resource_y3kqr"), SubResource("Resource_lgkw8"), SubResource("Resource_e02fs"), SubResource("Resource_4l2rm"), SubResource("Resource_ed1cn"), SubResource("Resource_5bob5"), SubResource("Resource_xfjyr"), SubResource("Resource_xvnot"), SubResource("Resource_v004a"), SubResource("Resource_82p4b"), SubResource("Resource_fubip"), SubResource("Resource_ktr6f"), SubResource("Resource_vydxy"), SubResource("Resource_5dxu5"), SubResource("Resource_vgxbl"), SubResource("Resource_3u0uu"), SubResource("Resource_lajpx"), SubResource("Resource_8t7si"), SubResource("Resource_c2cjo"), SubResource("Resource_nsgca"), SubResource("Resource_4dof6"), SubResource("Resource_jpvid"), SubResource("Resource_f34x6"), SubResource("Resource_vcbym"), SubResource("Resource_0ivi7"), SubResource("Resource_pa1gy"), SubResource("Resource_irmjy"), SubResource("Resource_ucnqk"), SubResource("Resource_2obor"), SubResource("Resource_3pevr"), SubResource("Resource_11p3s"), SubResource("Resource_df81w"), SubResource("Resource_wip78"), SubResource("Resource_kk7dl"), SubResource("Resource_fitg4"), SubResource("Resource_sl8xi"), SubResource("Resource_yoh8h"), SubResource("Resource_sb6it"), SubResource("Resource_odmlk"), SubResource("Resource_hlqrk"), SubResource("Resource_qvbyv"), SubResource("Resource_wjnp5"), SubResource("Resource_hsa6c"), SubResource("Resource_6o7jp"), SubResource("Resource_fl76v"), SubResource("Resource_hegig"), SubResource("Resource_3l8dh"), SubResource("Resource_kevjm"), SubResource("Resource_02kuk"), SubResource("Resource_easma"), SubResource("Resource_1nmok"), SubResource("Resource_ci001"), SubResource("Resource_y4ujm"), SubResource("Resource_3sc6r"), SubResource("Resource_2sq6n"), SubResource("Resource_3fo1m"), SubResource("Resource_5367e"), SubResource("Resource_i8oqp"), SubResource("Resource_4hk1b"), SubResource("Resource_6qqpq"), SubResource("Resource_w0jsv"), SubResource("Resource_1ktdq"), SubResource("Resource_ump3a"), SubResource("Resource_qt4h7"), SubResource("Resource_0a73l"), SubResource("Resource_1l60m"), SubResource("Resource_c2jbx"), SubResource("Resource_04710"), SubResource("Resource_7o3bh"), SubResource("Resource_fwji8"), SubResource("Resource_qplv4"), SubResource("Resource_i3yta"), SubResource("Resource_4h85u"), SubResource("Resource_kcmmb"), SubResource("Resource_ml7ex"), SubResource("Resource_rhqg7"), SubResource("Resource_repg2"), SubResource("Resource_lbto6"), SubResource("Resource_tqd8y"), SubResource("Resource_2jdtw"), SubResource("Resource_yfnid"), SubResource("Resource_bc0hc"), SubResource("Resource_70jy4"), SubResource("Resource_8gr5o"), SubResource("Resource_8kb4i"), SubResource("Resource_xggol"), SubResource("Resource_4anao"), SubResource("Resource_awyke"), SubResource("Resource_u4dbw"), SubResource("Resource_lowp0"), SubResource("Resource_53u84"), SubResource("Resource_4pvtl"), SubResource("Resource_kam4o"), SubResource("Resource_cfhho"), SubResource("Resource_r51r5"), SubResource("Resource_wn2pl"), SubResource("Resource_wry22"), SubResource("Resource_23ud3")])
+mouseDisplays = Array[ExtResource("1_8u7sa")]([SubResource("Resource_anwl3"), SubResource("Resource_5mtfd"), SubResource("Resource_f5hd3"), SubResource("Resource_skk38"), SubResource("Resource_uo5fr"), SubResource("Resource_vlm7s"), SubResource("Resource_8u7yb"), SubResource("Resource_76g7w")])

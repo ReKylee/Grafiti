@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3a3bo6cfyh5t"]
+[gd_scene load_steps=2 format=3 uid="uid://etgygx8dov63"]
 
 [ext_resource type="Script" path="res://addons/resources_spreadsheet_view/typed_editors/dock_color.gd" id="1"]
 

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InputtyPropertyBool" load_steps=2 format=3 uid="uid://bng0lbrjpcrr6"]
+
+[ext_resource type="Script" path="res://addons/inputty/Core/CustomProperties/InputtyPropertyBool.gd" id="1_xunvi"]
+
+[resource]
+script = ExtResource("1_xunvi")
+value = true
+trueDisplay = "Hold"
+falseDisplay = "Toggle"
+name = &"Crouch"
+order_index = 3

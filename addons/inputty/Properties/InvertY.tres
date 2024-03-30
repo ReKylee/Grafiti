@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InputtyPropertyBool" load_steps=2 format=3 uid="uid://bju7fky3oybak"]
+
+[ext_resource type="Script" path="res://addons/inputty/Core/CustomProperties/InputtyPropertyBool.gd" id="1_4cmp6"]
+
+[resource]
+script = ExtResource("1_4cmp6")
+value = false
+trueDisplay = "Inverted"
+falseDisplay = "Normal"
+name = &"Look Y"
+order_index = 1

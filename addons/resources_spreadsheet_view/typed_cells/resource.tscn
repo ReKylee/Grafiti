@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://clcndgxaty503"]
+[gd_scene format=3 uid="uid://cg74npafdg7uo"]
 
 [node name="Label" type="MarginContainer"]
 size_flags_vertical = 9

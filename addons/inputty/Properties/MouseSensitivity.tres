@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InputtyPropertyFloat" load_steps=2 format=3 uid="uid://bnjufrq4baphe"]
+
+[ext_resource type="Script" path="res://addons/inputty/Core/CustomProperties/InputtyPropertyFloat.gd" id="1_1y380"]
+
+[resource]
+script = ExtResource("1_1y380")
+value = 1.0
+minVal = 0.1
+maxVal = 10.0
+name = &"Mouse Sensitivity"
+order_index = 5

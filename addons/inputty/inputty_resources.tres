@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="InputtyResourceRefs" load_steps=22 format=3 uid="uid://cdt7sb32ta0vr"]
+
+[ext_resource type="Script" path="res://addons/inputty/Core/InputtyResourceRefs.gd" id="1_e8yl8"]
+[ext_resource type="Resource" uid="uid://btqe73t6jbh3f" path="res://addons/inputty/Properties/InvertX.tres" id="1_rcmy7"]
+[ext_resource type="Resource" uid="uid://bwy385q72dhsm" path="res://addons/inputty/Display/Sets/defaultGamepad.tres" id="1_tlpxd"]
+[ext_resource type="Resource" uid="uid://by41xt56ir26r" path="res://addons/inputty/Display/Sets/xbox360Controller.tres" id="2_11kbf"]
+[ext_resource type="Resource" uid="uid://bju7fky3oybak" path="res://addons/inputty/Properties/InvertY.tres" id="2_nsus7"]
+[ext_resource type="Resource" uid="uid://vsmncb08bbkr" path="res://addons/inputty/Display/Sets/xboxController.tres" id="3_niai6"]
+[ext_resource type="Resource" uid="uid://bhg5d5b3f3kjo" path="res://addons/inputty/Properties/LookSpeed.tres" id="3_wb06m"]
+[ext_resource type="Resource" uid="uid://b6ujv1s34atjr" path="res://addons/inputty/Display/Sets/ps3Gamepad.tres" id="4_3q6n0"]
+[ext_resource type="Resource" uid="uid://bng0lbrjpcrr6" path="res://addons/inputty/Properties/CrouchIsHold.tres" id="4_38p3n"]
+[ext_resource type="Resource" uid="uid://r7d1ckayu1tf" path="res://addons/inputty/Display/Sets/ps4Gamepad.tres" id="5_p8rvp"]
+[ext_resource type="Resource" uid="uid://bjft882c3d51n" path="res://addons/inputty/Properties/SprintIsHold.tres" id="5_vopxd"]
+[ext_resource type="Resource" uid="uid://bnjufrq4baphe" path="res://addons/inputty/Properties/MouseSensitivity.tres" id="6_rcwyp"]
+[ext_resource type="Resource" uid="uid://4hurclwntr4a" path="res://addons/inputty/Display/Sets/ps5Gamepad.tres" id="6_va46p"]
+[ext_resource type="Resource" uid="uid://bkdhb2id6vyns" path="res://addons/inputty/Properties/VibrationStrength.tres" id="7_7bh71"]
+[ext_resource type="Resource" uid="uid://f6vuqikuyv80" path="res://addons/inputty/Display/Sets/steamdeckGamepad.tres" id="7_iyt3c"]
+[ext_resource type="Resource" uid="uid://ccj5blaff0w7" path="res://addons/inputty/Properties/InputPrompts.tres" id="8_7mkpk"]
+[ext_resource type="Resource" uid="uid://dkx8s7wt6f61q" path="res://addons/inputty/Display/Sets/steamGamepad.tres" id="8_eo72d"]
+[ext_resource type="Resource" uid="uid://b6ergsl4w4gf6" path="res://addons/inputty/Display/Sets/switchJoycon.tres" id="9_yhkus"]
+[ext_resource type="Resource" uid="uid://bu1s6gkr8t6co" path="res://addons/inputty/Display/Sets/switchProGamepad.tres" id="10_5d81m"]
+[ext_resource type="Texture2D" uid="uid://c1cfbsh5x1rsk" path="res://addons/inputty/Display/IconTextures/pad.svg" id="11_jrclr"]
+[ext_resource type="Resource" uid="uid://c2tf8frcrai8d" path="res://addons/inputty/Display/Sets/keyboardDisplay.tres" id="12_v6nmf"]
+
+[resource]
+script = ExtResource("1_e8yl8")
+properties = Array[Resource("res://addons/inputty/Core/CustomProperties/InputtyProperty.gd")]([ExtResource("1_rcmy7"), ExtResource("2_nsus7"), ExtResource("3_wb06m"), ExtResource("4_38p3n"), ExtResource("5_vopxd"), ExtResource("6_rcwyp"), ExtResource("7_7bh71"), ExtResource("8_7mkpk")])
+keyboardIconSet = ExtResource("12_v6nmf")
+defaultControllerIcon = ExtResource("11_jrclr")
+controllerIconSets = Array[Resource("res://addons/inputty/Display/InputtyDisplaySet.gd")]([ExtResource("1_tlpxd"), ExtResource("2_11kbf"), ExtResource("3_niai6"), ExtResource("4_3q6n0"), ExtResource("5_p8rvp"), ExtResource("6_va46p"), ExtResource("7_iyt3c"), ExtResource("8_eo72d"), ExtResource("9_yhkus"), ExtResource("10_5d81m")])

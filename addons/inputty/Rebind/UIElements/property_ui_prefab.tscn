@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=3 uid="uid://4gxuwqklckkw"]
+
+[ext_resource type="Script" path="res://addons/inputty/Rebind/UIElements/InputtyPropertyUI.gd" id="1_mvxw2"]
+
+[node name="PropertyUIPrefab" type="Control"]
+custom_minimum_size = Vector2(600, 50)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_right = 300.0
+offset_bottom = 50.0
+grow_horizontal = 2
+size_flags_horizontal = 6
+script = ExtResource("1_mvxw2")
+
+[node name="PropertyLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Property Name"
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(1, 1, 1, 0.337255)
+
+[node name="BoolUI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 250.0
+offset_top = 2.0
+offset_right = 600.0
+offset_bottom = 48.0
+
+[node name="Button" type="Button" parent="BoolUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "On"
+clip_text = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="FloatUI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 250.0
+offset_top = 2.0
+offset_right = 600.0
+offset_bottom = 48.0
+
+[node name="HSlider" type="HSlider" parent="FloatUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.0
+
+[node name="ValueDisplay" type="Label" parent="FloatUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_right = -10.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnumUI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 250.0
+offset_top = 2.0
+offset_right = 600.0
+offset_bottom = 48.0
+
+[node name="OptionButton" type="OptionButton" parent="EnumUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+alignment = 1
+clip_text = true
+fit_to_longest_item = false
+
+[connection signal="pressed" from="BoolUI/Button" to="." method="toggleVal"]
+[connection signal="value_changed" from="FloatUI/HSlider" to="." method="floatValueChanged"]
+[connection signal="item_selected" from="EnumUI/OptionButton" to="." method="setEnumValue"]

@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="InputtyDisplaySet" load_steps=32 format=3 uid="uid://f6vuqikuyv80"]
+
+[ext_resource type="Texture2D" uid="uid://x6gbf86p3hra" path="res://addons/inputty/Display/IconTextures/pad_stickl_left.svg" id="1_arvdj"]
+[ext_resource type="Texture2D" uid="uid://bibdvofjwkhrm" path="res://addons/inputty/Display/IconTextures/pad_stickl_right.svg" id="2_oppio"]
+[ext_resource type="Texture2D" uid="uid://dhumn4ldcw6dq" path="res://addons/inputty/Display/IconTextures/pad_stickl_up.svg" id="3_cmdno"]
+[ext_resource type="Texture2D" uid="uid://diyqh2blfyq5k" path="res://addons/inputty/Display/IconTextures/pad_stickl_down.svg" id="4_gahs0"]
+[ext_resource type="Texture2D" uid="uid://dhw4rlfr6w135" path="res://addons/inputty/Display/IconTextures/pad_stickr_left.svg" id="5_6qgw1"]
+[ext_resource type="Texture2D" uid="uid://b6gt6q55v1o6x" path="res://addons/inputty/Display/IconTextures/pad_stickr_right.svg" id="6_8gb1n"]
+[ext_resource type="Texture2D" uid="uid://cecf4xv71hj63" path="res://addons/inputty/Display/IconTextures/pad_stickr_up.svg" id="7_k68tx"]
+[ext_resource type="Texture2D" uid="uid://caitsahfr6qfp" path="res://addons/inputty/Display/IconTextures/pad_stickr_down.svg" id="8_egk5o"]
+[ext_resource type="Texture2D" uid="uid://ddvberbt5168q" path="res://addons/inputty/Display/IconTextures/steamdeck_l2.svg" id="9_r78bs"]
+[ext_resource type="Texture2D" uid="uid://37w0iaoe0chr" path="res://addons/inputty/Display/IconTextures/steamdeck_r2.svg" id="10_n4ems"]
+[ext_resource type="Texture2D" uid="uid://dknv4smba4keu" path="res://addons/inputty/Display/IconTextures/xb_A.svg" id="11_nsb4c"]
+[ext_resource type="Texture2D" uid="uid://dgwoko8amvuav" path="res://addons/inputty/Display/IconTextures/xb_B.svg" id="12_n21sx"]
+[ext_resource type="Texture2D" uid="uid://d000dpcysplyd" path="res://addons/inputty/Display/IconTextures/xb_X.svg" id="13_rk3mc"]
+[ext_resource type="Texture2D" uid="uid://dv7yl66crhy0f" path="res://addons/inputty/Display/IconTextures/xb_Y.svg" id="14_x74uq"]
+[ext_resource type="Texture2D" uid="uid://b2j6ecg1p6cnk" path="res://addons/inputty/Display/IconTextures/steamdeck_back.svg" id="15_ag1a7"]
+[ext_resource type="Texture2D" uid="uid://cd2ycyd3yjbjk" path="res://addons/inputty/Display/IconTextures/steamdeck_home.svg" id="16_ue5ix"]
+[ext_resource type="Texture2D" uid="uid://dgkcckq1ywurk" path="res://addons/inputty/Display/IconTextures/steamdeck_menu.svg" id="17_o84go"]
+[ext_resource type="Texture2D" uid="uid://c6xtfhaxh3onh" path="res://addons/inputty/Display/IconTextures/pad_stickl.svg" id="18_n1ena"]
+[ext_resource type="Texture2D" uid="uid://c55cluw7wnc15" path="res://addons/inputty/Display/IconTextures/pad_stickr.svg" id="19_q73f5"]
+[ext_resource type="Texture2D" uid="uid://ck0272alfwjls" path="res://addons/inputty/Display/IconTextures/steamdeck_l1.svg" id="20_gpex8"]
+[ext_resource type="Texture2D" uid="uid://0nlv8p2svqir" path="res://addons/inputty/Display/IconTextures/steamdeck_r1.svg" id="21_dximl"]
+[ext_resource type="Texture2D" uid="uid://chh3rgr8vxvah" path="res://addons/inputty/Display/IconTextures/pad_dpad_up.svg" id="22_osoyq"]
+[ext_resource type="Texture2D" uid="uid://fde40wlivduc" path="res://addons/inputty/Display/IconTextures/pad_dpad_down.svg" id="23_7l2dx"]
+[ext_resource type="Texture2D" uid="uid://clcj1ukdt54tw" path="res://addons/inputty/Display/IconTextures/pad_dpad_left.svg" id="24_xlm7r"]
+[ext_resource type="Texture2D" uid="uid://gba54fqs8dqm" path="res://addons/inputty/Display/IconTextures/pad_dpad_right.svg" id="25_5jwcl"]
+[ext_resource type="Texture2D" uid="uid://b4r0sixy67lvj" path="res://addons/inputty/Display/IconTextures/steamdeck_ellipsis.svg" id="26_ek005"]
+[ext_resource type="Texture2D" uid="uid://b8rdesgddtxep" path="res://addons/inputty/Display/IconTextures/steamdeck_l3.svg" id="27_mljyg"]
+[ext_resource type="Texture2D" uid="uid://c7c1bhwmntuc3" path="res://addons/inputty/Display/IconTextures/steamdeck_l4.svg" id="28_q6huk"]
+[ext_resource type="Texture2D" uid="uid://cpheemv4iidnl" path="res://addons/inputty/Display/IconTextures/steamdeck_r3.svg" id="29_0p1fe"]
+[ext_resource type="Texture2D" uid="uid://bnyxt2rfjt5c6" path="res://addons/inputty/Display/IconTextures/steamdeck_r4.svg" id="30_v6c73"]
+[ext_resource type="Script" path="res://addons/inputty/Display/InputtyDisplaySet.gd" id="31_ad87d"]
+
+[resource]
+script = ExtResource("31_ad87d")
+name = "Steamdeck input icons"
+imageSet = Array[Texture]([ExtResource("11_nsb4c"), ExtResource("12_n21sx"), ExtResource("13_rk3mc"), ExtResource("14_x74uq"), ExtResource("15_ag1a7"), ExtResource("16_ue5ix"), ExtResource("17_o84go"), ExtResource("18_n1ena"), ExtResource("19_q73f5"), ExtResource("20_gpex8"), ExtResource("21_dximl"), ExtResource("22_osoyq"), ExtResource("23_7l2dx"), ExtResource("24_xlm7r"), ExtResource("25_5jwcl"), ExtResource("26_ek005"), ExtResource("27_mljyg"), ExtResource("28_q6huk"), ExtResource("29_0p1fe"), ExtResource("30_v6c73")])
+axisImageSet = Array[Texture]([ExtResource("1_arvdj"), ExtResource("2_oppio"), ExtResource("3_cmdno"), ExtResource("4_gahs0"), ExtResource("5_6qgw1"), ExtResource("6_8gb1n"), ExtResource("7_k68tx"), ExtResource("8_egk5o"), null, ExtResource("9_r78bs"), null, ExtResource("10_n4ems")])
+buttonNames = Array[String](["A", "B", "X", "Y", "Back", "STEAM", "Menu", "L Stick", "R Stick", "L1", "R1", "Up", "Down", "Left", "Right", "...", "L3", "L4", "R3", "R4"])
+axisNames = Array[String](["L Left", "L Right", "L Up", "L Down", "R Left", "R Right", "R Up", "R Down", "", "L2", "", "R2"])
+nameMustContain = Array[String](["steam", "deck"])
+nameMustNotContain = Array[String](["virtual"])
+nameContainsAny = Array[String]([])

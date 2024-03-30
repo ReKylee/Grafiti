@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://rww3gpl052bn"]
+[gd_scene load_steps=3 format=3 uid="uid://dpi3gnjdhefwv"]
 
 [ext_resource type="Script" path="res://addons/resources_spreadsheet_view/typed_editors/dock_texture.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://c08qavfwqr3k7" path="res://icon.png" id="2_xbp0j"]
+[ext_resource type="Texture2D" uid="uid://bgw8kpcl6h1wh" path="res://icon.png" id="2_xbp0j"]
 
 [node name="EditTexture" type="VBoxContainer"]
 anchors_preset = -1

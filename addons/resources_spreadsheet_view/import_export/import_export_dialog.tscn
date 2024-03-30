@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b413igx28kkvb"]
+[gd_scene load_steps=7 format=3 uid="uid://kxn3kwfv0q8"]
 
 [ext_resource type="Script" path="res://addons/resources_spreadsheet_view/import_export/import_export_dialog.gd" id="1"]
 [ext_resource type="Script" path="res://addons/resources_spreadsheet_view/import_export/formats_export/export_csv.gd" id="2_33c6s"]

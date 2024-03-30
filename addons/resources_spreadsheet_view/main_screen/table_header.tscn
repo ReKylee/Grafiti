@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1s6oihqedvo5"]
+[gd_scene load_steps=3 format=3 uid="uid://w3onstbqnddk"]
 
 [ext_resource type="Script" path="res://addons/resources_spreadsheet_view/main_screen/table_header.gd" id="1_5fd1m"]
 [ext_resource type="Script" path="res://addons/resources_spreadsheet_view/editor_icon_button.gd" id="2_0ymob"]

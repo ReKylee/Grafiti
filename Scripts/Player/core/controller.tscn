@@ -1,14 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://ciu2qgckgu5sr"]
+[gd_scene load_steps=9 format=3 uid="uid://bo74tvl4l6kfa"]
 
 [ext_resource type="Script" path="res://Scripts/Player/core/character_controller_3d.gd" id="1_snllq"]
 [ext_resource type="Script" path="res://Scripts/Player/abilities/crouch_ability_3d.gd" id="7_kh76d"]
 [ext_resource type="Script" path="res://Scripts/Player/abilities/sprint_ability_3d.gd" id="8_8b02o"]
 [ext_resource type="Script" path="res://Scripts/Player/abilities/walk_ability_3d.gd" id="9_laych"]
 [ext_resource type="Script" path="res://Scripts/Player/abilities/jump_ability_3d.gd" id="10_abxar"]
-[ext_resource type="Script" path="res://Scripts/Player/abilities/fly_ability_3d.gd" id="11_obyn2"]
-[ext_resource type="Script" path="res://Scripts/Player/abilities/swim_ability_3d.gd" id="12_3irqv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fn1rj"]
+
+[sub_resource type="Resource" id="Resource_pp8v2"]
+metadata/__load_path__ = "res://Scripts/Player/abilities/fly_ability_3d.gd"
+
+[sub_resource type="Resource" id="Resource_vam32"]
+metadata/__load_path__ = "res://Scripts/Player/abilities/swim_ability_3d.gd"
 
 [node name="CharacterController3D" type="CharacterBody3D"]
 floor_snap_length = 0.5
@@ -34,10 +38,10 @@ script = ExtResource("7_kh76d")
 script = ExtResource("10_abxar")
 
 [node name="Fly Ability 3D" type="Node3D" parent="."]
-script = ExtResource("11_obyn2")
+script = SubResource("Resource_pp8v2")
 
 [node name="Swim Ability 3D" type="Node3D" parent="."]
-script = ExtResource("12_3irqv")
+script = SubResource("Resource_vam32")
 
 [node name="RayCast3D" type="RayCast3D" parent="Swim Ability 3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

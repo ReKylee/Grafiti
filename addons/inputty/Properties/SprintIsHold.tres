@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InputtyPropertyBool" load_steps=2 format=3 uid="uid://bjft882c3d51n"]
+
+[ext_resource type="Script" path="res://addons/inputty/Core/CustomProperties/InputtyPropertyBool.gd" id="1_orarn"]
+
+[resource]
+script = ExtResource("1_orarn")
+value = true
+trueDisplay = "Hold"
+falseDisplay = "Toggle"
+name = &"Sprint"
+order_index = 4

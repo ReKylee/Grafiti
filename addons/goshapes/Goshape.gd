@@ -68,14 +68,20 @@ func _ready() -> void:
 		curve = Curve3D.new()
 	if follow_remote_transform == null:
 		follow_remote_transform = RemoteTransform3D.new() as RemoteTransform3D
+		follow_remote_transform.update_position = true
+		follow_remote_transform.update_rotation = true
+		
 	if path_follow == null:
 		path_follow = PathFollow3D.new() as PathFollow3D
 		path_follow.cubic_interp = false
 		path_follow.rotation_mode = PathFollow3D.ROTATION_ORIENTED
+		path_follow.use_model_front = true
 		path_follow.v_offset = .5
 		path_follow.tilt_enabled = false
 		add_child(path_follow)
+		var c = CSGBox3D.new()
 		path_follow.add_child(follow_remote_transform)
+		path_follow.add_child(c)
 	if not ResourceUtils.is_local(curve):
 		curve = curve.duplicate(true)
 		

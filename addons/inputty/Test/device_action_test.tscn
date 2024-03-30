@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwt7gyi2ix3l6"]
+
+[ext_resource type="Script" path="res://addons/inputty/Test/device_action_test.gd" id="1_8sx52"]
+
+[node name="DeviceActionTest" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/ScrollContainer/HFlowContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+text = "text here"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "asdf baby"
+script = ExtResource("1_8sx52")
+actionsToMonitor = Array[String](["ui_select", "ui_cancel", "ui_left", "ui_right", "ui_up", "ui_down"])

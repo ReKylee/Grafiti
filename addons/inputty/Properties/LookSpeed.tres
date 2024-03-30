@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InputtyPropertyFloat" load_steps=2 format=3 uid="uid://bhg5d5b3f3kjo"]
+
+[ext_resource type="Script" path="res://addons/inputty/Core/CustomProperties/InputtyPropertyFloat.gd" id="1_ts01m"]
+
+[resource]
+script = ExtResource("1_ts01m")
+value = 1.0
+minVal = 0.25
+maxVal = 2.0
+name = &"Look Speed"
+order_index = 2

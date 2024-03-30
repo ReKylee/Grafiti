@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InputtyPropertyFloat" load_steps=2 format=3 uid="uid://bkdhb2id6vyns"]
+
+[ext_resource type="Script" path="res://addons/inputty/Core/CustomProperties/InputtyPropertyFloat.gd" id="1_rlfo6"]
+
+[resource]
+script = ExtResource("1_rlfo6")
+value = 1.0
+minVal = 0.0
+maxVal = 1.0
+name = &"Vibration Strength"
+order_index = 6

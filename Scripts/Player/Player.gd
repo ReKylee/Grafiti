@@ -4,8 +4,8 @@ extends CharacterController3D
 @onready var camera_marker = $CameraAnchor/CameraPos as Marker3D
 @onready var camera_springarm = $CameraAnchor as SpringArm3D
 @onready var graffiti_area = $InteractionArea as Area3D
-@onready var froggo = $Froggo as FrogAnimationController
 @onready var draw_3d = $Draw3D as Draw3D
+@onready var froggo: FrogAnimationController = $Froggo
 
 
 func _ready():
@@ -26,8 +26,9 @@ func _physics_process(delta):
 	var input_axis = Input.get_vector("move_backward", "move_forward", "move_left", "move_right")
 	var input_jump = Input.is_action_just_pressed("move_jump")
 	var input_sprint = Input.is_action_pressed("move_sprint")
-	froggo.velocity = transform.basis * velocity
-	froggo.direction = _direction
+	if not grind_ability.is_actived():
+		froggo.velocity = transform.basis * velocity
+		froggo.direction = _direction
 	draw_3d.draw_line([Vector3.ZERO, froggo.velocity]) 
 	move(delta, input_axis, input_jump, input_sprint)
 	check_for_graffiti()
@@ -42,4 +43,6 @@ func check_for_graffiti():
 
 func graffiti_ended(size, id):
 	pass
+
+
 

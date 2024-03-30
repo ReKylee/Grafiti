@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxr4b3o8yvpap"]
+[gd_scene load_steps=6 format=3 uid="uid://bfke5oby32k7h"]
 
 [ext_resource type="Script" path="res://Scripts/Graffiti/Graffiti.gd" id="1_xnquk"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="2_b370i"]

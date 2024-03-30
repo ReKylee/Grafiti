@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://xvbf66cjym01"]
+[gd_scene format=3 uid="uid://rx4llb3ee8cf"]
 
 [node name="EditModeButton" type="Button"]
 offset_right = 8.0

@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="InputtyDisplaySet" load_steps=30 format=3 uid="uid://b6ergsl4w4gf6"]
+
+[ext_resource type="Texture2D" uid="uid://x6gbf86p3hra" path="res://addons/inputty/Display/IconTextures/pad_stickl_left.svg" id="1_ogpp2"]
+[ext_resource type="Texture2D" uid="uid://bibdvofjwkhrm" path="res://addons/inputty/Display/IconTextures/pad_stickl_right.svg" id="2_040nl"]
+[ext_resource type="Texture2D" uid="uid://dhumn4ldcw6dq" path="res://addons/inputty/Display/IconTextures/pad_stickl_up.svg" id="3_jmqo5"]
+[ext_resource type="Texture2D" uid="uid://diyqh2blfyq5k" path="res://addons/inputty/Display/IconTextures/pad_stickl_down.svg" id="4_60qn3"]
+[ext_resource type="Texture2D" uid="uid://dhw4rlfr6w135" path="res://addons/inputty/Display/IconTextures/pad_stickr_left.svg" id="5_8nym5"]
+[ext_resource type="Texture2D" uid="uid://b6gt6q55v1o6x" path="res://addons/inputty/Display/IconTextures/pad_stickr_right.svg" id="6_c7qqc"]
+[ext_resource type="Texture2D" uid="uid://cecf4xv71hj63" path="res://addons/inputty/Display/IconTextures/pad_stickr_up.svg" id="7_rmo1f"]
+[ext_resource type="Texture2D" uid="uid://caitsahfr6qfp" path="res://addons/inputty/Display/IconTextures/pad_stickr_down.svg" id="8_7guq2"]
+[ext_resource type="Texture2D" uid="uid://bel857ofa6wwt" path="res://addons/inputty/Display/IconTextures/switch_zl.svg" id="9_8a422"]
+[ext_resource type="Texture2D" uid="uid://ixmwaej4hpqp" path="res://addons/inputty/Display/IconTextures/switch_zr.svg" id="10_gehxb"]
+[ext_resource type="Texture2D" uid="uid://cvdhhnw2u5dkx" path="res://addons/inputty/Display/IconTextures/switch_B.svg" id="11_yueqq"]
+[ext_resource type="Texture2D" uid="uid://bmml8tdsys0gs" path="res://addons/inputty/Display/IconTextures/switch_A.svg" id="12_26duh"]
+[ext_resource type="Texture2D" uid="uid://c3tdlogx2u68e" path="res://addons/inputty/Display/IconTextures/switch_Y.svg" id="13_08j7a"]
+[ext_resource type="Texture2D" uid="uid://bjebalo85r1we" path="res://addons/inputty/Display/IconTextures/switch_X.svg" id="14_ki15h"]
+[ext_resource type="Texture2D" uid="uid://dyobofbdxi6fm" path="res://addons/inputty/Display/IconTextures/switch_minus.svg" id="15_h7tkx"]
+[ext_resource type="Texture2D" uid="uid://dpwrar8i0qpa2" path="res://addons/inputty/Display/IconTextures/switch_home.svg" id="16_pgplf"]
+[ext_resource type="Texture2D" uid="uid://nm6gil5xmmfs" path="res://addons/inputty/Display/IconTextures/switch_plus.svg" id="17_vrvbg"]
+[ext_resource type="Texture2D" uid="uid://c6xtfhaxh3onh" path="res://addons/inputty/Display/IconTextures/pad_stickl.svg" id="18_egpbg"]
+[ext_resource type="Texture2D" uid="uid://c55cluw7wnc15" path="res://addons/inputty/Display/IconTextures/pad_stickr.svg" id="19_mo81f"]
+[ext_resource type="Texture2D" uid="uid://b3h8mv52jqhe7" path="res://addons/inputty/Display/IconTextures/switch_l.svg" id="20_4yru0"]
+[ext_resource type="Texture2D" uid="uid://b4074we5p7j0" path="res://addons/inputty/Display/IconTextures/switch_r.svg" id="21_lrpmj"]
+[ext_resource type="Texture2D" uid="uid://c4osgsimh13av" path="res://addons/inputty/Display/IconTextures/switch_up.svg" id="22_tsls4"]
+[ext_resource type="Texture2D" uid="uid://qg814qp4m4qn" path="res://addons/inputty/Display/IconTextures/switch_down.svg" id="23_ygwt1"]
+[ext_resource type="Texture2D" uid="uid://cummqu12rtkf6" path="res://addons/inputty/Display/IconTextures/switch_left.svg" id="24_0v3ks"]
+[ext_resource type="Texture2D" uid="uid://dugu3u6shci5g" path="res://addons/inputty/Display/IconTextures/switch_right.svg" id="25_qxsiq"]
+[ext_resource type="Texture2D" uid="uid://bw8wtrll3klbk" path="res://addons/inputty/Display/IconTextures/switch_capture.svg" id="26_ljdpd"]
+[ext_resource type="Texture2D" uid="uid://daj57phetdx3g" path="res://addons/inputty/Display/IconTextures/switch_sl.svg" id="27_hvelp"]
+[ext_resource type="Texture2D" uid="uid://bfpqrglk7gkge" path="res://addons/inputty/Display/IconTextures/switch_sr.svg" id="28_3swut"]
+[ext_resource type="Script" path="res://addons/inputty/Display/InputtyDisplaySet.gd" id="29_u3ksm"]
+
+[resource]
+script = ExtResource("29_u3ksm")
+name = "Joycon icons"
+imageSet = Array[Texture]([ExtResource("11_yueqq"), ExtResource("12_26duh"), ExtResource("13_08j7a"), ExtResource("14_ki15h"), ExtResource("15_h7tkx"), ExtResource("16_pgplf"), ExtResource("17_vrvbg"), ExtResource("18_egpbg"), ExtResource("19_mo81f"), ExtResource("20_4yru0"), ExtResource("21_lrpmj"), ExtResource("22_tsls4"), ExtResource("23_ygwt1"), ExtResource("24_0v3ks"), ExtResource("25_qxsiq"), ExtResource("26_ljdpd"), ExtResource("27_hvelp"), ExtResource("28_3swut")])
+axisImageSet = Array[Texture]([ExtResource("1_ogpp2"), ExtResource("2_040nl"), ExtResource("3_jmqo5"), ExtResource("4_60qn3"), ExtResource("5_8nym5"), ExtResource("6_c7qqc"), ExtResource("7_rmo1f"), ExtResource("8_7guq2"), null, ExtResource("9_8a422"), null, ExtResource("10_gehxb")])
+buttonNames = Array[String](["B", "A", "Y", "X", "-", "Home", "+", "L Stick", "R Stick", "L", "R", "Up", "Down", "Left", "Right", "Capture", "SL", "SR"])
+axisNames = Array[String](["L Left", "L Right", "L Up", "L Down", "R Left", "R Right", "R Up", "R Down", "", "ZL", "", "ZR"])
+nameMustContain = Array[String]([])
+nameMustNotContain = Array[String]([])
+nameContainsAny = Array[String](["joy-con", "joy con"])

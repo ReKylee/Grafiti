@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="InputtyDisplaySet" load_steps=27 format=3 uid="uid://by41xt56ir26r"]
+
+[ext_resource type="Texture2D" uid="uid://x6gbf86p3hra" path="res://addons/inputty/Display/IconTextures/pad_stickl_left.svg" id="1_3vpjv"]
+[ext_resource type="Texture2D" uid="uid://bibdvofjwkhrm" path="res://addons/inputty/Display/IconTextures/pad_stickl_right.svg" id="2_pnd1s"]
+[ext_resource type="Texture2D" uid="uid://dhumn4ldcw6dq" path="res://addons/inputty/Display/IconTextures/pad_stickl_up.svg" id="3_3v8ao"]
+[ext_resource type="Texture2D" uid="uid://diyqh2blfyq5k" path="res://addons/inputty/Display/IconTextures/pad_stickl_down.svg" id="4_3gcnx"]
+[ext_resource type="Texture2D" uid="uid://dhw4rlfr6w135" path="res://addons/inputty/Display/IconTextures/pad_stickr_left.svg" id="5_bsoi1"]
+[ext_resource type="Texture2D" uid="uid://b6gt6q55v1o6x" path="res://addons/inputty/Display/IconTextures/pad_stickr_right.svg" id="6_qrcjs"]
+[ext_resource type="Texture2D" uid="uid://cecf4xv71hj63" path="res://addons/inputty/Display/IconTextures/pad_stickr_up.svg" id="7_syu1a"]
+[ext_resource type="Texture2D" uid="uid://caitsahfr6qfp" path="res://addons/inputty/Display/IconTextures/pad_stickr_down.svg" id="8_h5r4r"]
+[ext_resource type="Texture2D" uid="uid://w4ilnn5vvwkr" path="res://addons/inputty/Display/IconTextures/xb_lt.svg" id="9_0como"]
+[ext_resource type="Texture2D" uid="uid://joq2mrtpi24q" path="res://addons/inputty/Display/IconTextures/xb_rt.svg" id="10_mnn5e"]
+[ext_resource type="Texture2D" uid="uid://dknv4smba4keu" path="res://addons/inputty/Display/IconTextures/xb_A.svg" id="11_7fg2l"]
+[ext_resource type="Texture2D" uid="uid://dgwoko8amvuav" path="res://addons/inputty/Display/IconTextures/xb_B.svg" id="12_wfbdt"]
+[ext_resource type="Texture2D" uid="uid://d000dpcysplyd" path="res://addons/inputty/Display/IconTextures/xb_X.svg" id="13_amu36"]
+[ext_resource type="Texture2D" uid="uid://dv7yl66crhy0f" path="res://addons/inputty/Display/IconTextures/xb_Y.svg" id="14_tmvrx"]
+[ext_resource type="Texture2D" uid="uid://l5ops0fqeeqo" path="res://addons/inputty/Display/IconTextures/steam_back.svg" id="15_8fdkn"]
+[ext_resource type="Texture2D" uid="uid://bba8ki7cbtedi" path="res://addons/inputty/Display/IconTextures/xb_home.svg" id="16_kb572"]
+[ext_resource type="Texture2D" uid="uid://cs3vjxmtxjw23" path="res://addons/inputty/Display/IconTextures/steam_start.svg" id="17_6un7n"]
+[ext_resource type="Texture2D" uid="uid://c6xtfhaxh3onh" path="res://addons/inputty/Display/IconTextures/pad_stickl.svg" id="18_ykd8v"]
+[ext_resource type="Texture2D" uid="uid://c55cluw7wnc15" path="res://addons/inputty/Display/IconTextures/pad_stickr.svg" id="19_cbkbk"]
+[ext_resource type="Texture2D" uid="uid://b3rd1eaa4b2o3" path="res://addons/inputty/Display/IconTextures/xb_lb.svg" id="20_yur6d"]
+[ext_resource type="Texture2D" uid="uid://bn7oair5lwivh" path="res://addons/inputty/Display/IconTextures/xb_rb.svg" id="21_wwwy6"]
+[ext_resource type="Texture2D" uid="uid://chh3rgr8vxvah" path="res://addons/inputty/Display/IconTextures/pad_dpad_up.svg" id="22_ho0ja"]
+[ext_resource type="Texture2D" uid="uid://fde40wlivduc" path="res://addons/inputty/Display/IconTextures/pad_dpad_down.svg" id="23_6c0ih"]
+[ext_resource type="Texture2D" uid="uid://clcj1ukdt54tw" path="res://addons/inputty/Display/IconTextures/pad_dpad_left.svg" id="24_bvfcu"]
+[ext_resource type="Texture2D" uid="uid://gba54fqs8dqm" path="res://addons/inputty/Display/IconTextures/pad_dpad_right.svg" id="25_i7ih7"]
+[ext_resource type="Script" path="res://addons/inputty/Display/InputtyDisplaySet.gd" id="26_5de4b"]
+
+[resource]
+script = ExtResource("26_5de4b")
+name = "xbox360 controller icons"
+imageSet = Array[Texture]([ExtResource("11_7fg2l"), ExtResource("12_wfbdt"), ExtResource("13_amu36"), ExtResource("14_tmvrx"), ExtResource("15_8fdkn"), ExtResource("16_kb572"), ExtResource("17_6un7n"), ExtResource("18_ykd8v"), ExtResource("19_cbkbk"), ExtResource("20_yur6d"), ExtResource("21_wwwy6"), ExtResource("22_ho0ja"), ExtResource("23_6c0ih"), ExtResource("24_bvfcu"), ExtResource("25_i7ih7")])
+axisImageSet = Array[Texture]([ExtResource("1_3vpjv"), ExtResource("2_pnd1s"), ExtResource("3_3v8ao"), ExtResource("4_3gcnx"), ExtResource("5_bsoi1"), ExtResource("6_qrcjs"), ExtResource("7_syu1a"), ExtResource("8_h5r4r"), null, ExtResource("9_0como"), null, ExtResource("10_mnn5e")])
+buttonNames = Array[String](["A", "B", "X", "Y", "Back", "Home", "Menu", "L Stick", "R Stick", "LB", "RB", "Up", "Down", "Left", "Right"])
+axisNames = Array[String](["L Left", "L Right", "L Up", "L Down", "R Left", "R Right", "R Up", "R Down", "", "LT", "", "RT"])
+nameMustContain = Array[String](["360"])
+nameMustNotContain = Array[String]([])
+nameContainsAny = Array[String](["xbox", "xinput"])

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="InputtyDisplaySet" load_steps=28 format=3 uid="uid://bu1s6gkr8t6co"]
+
+[ext_resource type="Texture2D" uid="uid://x6gbf86p3hra" path="res://addons/inputty/Display/IconTextures/pad_stickl_left.svg" id="1_q3vh4"]
+[ext_resource type="Texture2D" uid="uid://bibdvofjwkhrm" path="res://addons/inputty/Display/IconTextures/pad_stickl_right.svg" id="2_6weg6"]
+[ext_resource type="Texture2D" uid="uid://dhumn4ldcw6dq" path="res://addons/inputty/Display/IconTextures/pad_stickl_up.svg" id="3_0h8nl"]
+[ext_resource type="Texture2D" uid="uid://diyqh2blfyq5k" path="res://addons/inputty/Display/IconTextures/pad_stickl_down.svg" id="4_t2m7w"]
+[ext_resource type="Texture2D" uid="uid://dhw4rlfr6w135" path="res://addons/inputty/Display/IconTextures/pad_stickr_left.svg" id="5_2d50y"]
+[ext_resource type="Texture2D" uid="uid://b6gt6q55v1o6x" path="res://addons/inputty/Display/IconTextures/pad_stickr_right.svg" id="6_oahbg"]
+[ext_resource type="Texture2D" uid="uid://cecf4xv71hj63" path="res://addons/inputty/Display/IconTextures/pad_stickr_up.svg" id="7_fwmgy"]
+[ext_resource type="Texture2D" uid="uid://caitsahfr6qfp" path="res://addons/inputty/Display/IconTextures/pad_stickr_down.svg" id="8_e6e2o"]
+[ext_resource type="Texture2D" uid="uid://bel857ofa6wwt" path="res://addons/inputty/Display/IconTextures/switch_zl.svg" id="9_6eqie"]
+[ext_resource type="Texture2D" uid="uid://ixmwaej4hpqp" path="res://addons/inputty/Display/IconTextures/switch_zr.svg" id="10_uxx66"]
+[ext_resource type="Texture2D" uid="uid://cvdhhnw2u5dkx" path="res://addons/inputty/Display/IconTextures/switch_B.svg" id="11_3mg42"]
+[ext_resource type="Texture2D" uid="uid://bmml8tdsys0gs" path="res://addons/inputty/Display/IconTextures/switch_A.svg" id="12_4k6vx"]
+[ext_resource type="Texture2D" uid="uid://c3tdlogx2u68e" path="res://addons/inputty/Display/IconTextures/switch_Y.svg" id="13_8175b"]
+[ext_resource type="Texture2D" uid="uid://bjebalo85r1we" path="res://addons/inputty/Display/IconTextures/switch_X.svg" id="14_t0h3f"]
+[ext_resource type="Texture2D" uid="uid://fvk54enj542x" path="res://addons/inputty/Display/IconTextures/switchpro_minus.svg" id="15_e0ql3"]
+[ext_resource type="Texture2D" uid="uid://dpwrar8i0qpa2" path="res://addons/inputty/Display/IconTextures/switch_home.svg" id="16_fl2gp"]
+[ext_resource type="Texture2D" uid="uid://1ubww3yh32xe" path="res://addons/inputty/Display/IconTextures/switchpro_plus.svg" id="17_qcl7h"]
+[ext_resource type="Texture2D" uid="uid://c6xtfhaxh3onh" path="res://addons/inputty/Display/IconTextures/pad_stickl.svg" id="18_hf37g"]
+[ext_resource type="Texture2D" uid="uid://c55cluw7wnc15" path="res://addons/inputty/Display/IconTextures/pad_stickr.svg" id="19_erwxl"]
+[ext_resource type="Texture2D" uid="uid://b3h8mv52jqhe7" path="res://addons/inputty/Display/IconTextures/switch_l.svg" id="20_ma4hn"]
+[ext_resource type="Texture2D" uid="uid://b4074we5p7j0" path="res://addons/inputty/Display/IconTextures/switch_r.svg" id="21_d6uoy"]
+[ext_resource type="Texture2D" uid="uid://chh3rgr8vxvah" path="res://addons/inputty/Display/IconTextures/pad_dpad_up.svg" id="22_kskof"]
+[ext_resource type="Texture2D" uid="uid://fde40wlivduc" path="res://addons/inputty/Display/IconTextures/pad_dpad_down.svg" id="23_74lpk"]
+[ext_resource type="Texture2D" uid="uid://clcj1ukdt54tw" path="res://addons/inputty/Display/IconTextures/pad_dpad_left.svg" id="24_0nstm"]
+[ext_resource type="Texture2D" uid="uid://gba54fqs8dqm" path="res://addons/inputty/Display/IconTextures/pad_dpad_right.svg" id="25_s5nvl"]
+[ext_resource type="Texture2D" uid="uid://bw8wtrll3klbk" path="res://addons/inputty/Display/IconTextures/switch_capture.svg" id="26_0wr51"]
+[ext_resource type="Script" path="res://addons/inputty/Display/InputtyDisplaySet.gd" id="27_67pmu"]
+
+[resource]
+script = ExtResource("27_67pmu")
+name = "Switch pro controller icons"
+imageSet = Array[Texture]([ExtResource("11_3mg42"), ExtResource("12_4k6vx"), ExtResource("13_8175b"), ExtResource("14_t0h3f"), ExtResource("15_e0ql3"), ExtResource("16_fl2gp"), ExtResource("17_qcl7h"), ExtResource("18_hf37g"), ExtResource("19_erwxl"), ExtResource("20_ma4hn"), ExtResource("21_d6uoy"), ExtResource("22_kskof"), ExtResource("23_74lpk"), ExtResource("24_0nstm"), ExtResource("25_s5nvl"), ExtResource("26_0wr51")])
+axisImageSet = Array[Texture]([ExtResource("1_q3vh4"), ExtResource("2_6weg6"), ExtResource("3_0h8nl"), ExtResource("4_t2m7w"), ExtResource("5_2d50y"), ExtResource("6_oahbg"), ExtResource("7_fwmgy"), ExtResource("8_e6e2o"), null, ExtResource("9_6eqie"), null, ExtResource("10_uxx66")])
+buttonNames = Array[String](["B", "A", "Y", "X", "-", "Home", "+", "L Stick", "R Stick", "L1", "R1", "Up", "Down", "Left", "Right", "Capture"])
+axisNames = Array[String](["L Left", "L Right", "L Up", "L Down", "R Left", "R Right", "R Up", "R Down", "", "ZL", "", "ZR"])
+nameMustContain = Array[String]([])
+nameMustNotContain = Array[String]([])
+nameContainsAny = Array[String](["switch pro", "nintendo"])

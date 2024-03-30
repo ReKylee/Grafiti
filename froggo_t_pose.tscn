@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dek3a7pa4ms1h"]
+[gd_scene load_steps=17 format=3 uid="uid://8d2xrbndjx2u"]
 
 [ext_resource type="PackedScene" uid="uid://bby0cdk8gwfjy" path="res://Assets/Player/FroggoTPose.fbx" id="1_3lsvv"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerModelController.gd" id="2_i1w7e"]
@@ -56,7 +56,7 @@ nodes/Sprint/position = Vector2(-280, 160)
 nodes/ToJumpBlend/node = SubResource("AnimationNodeBlend2_l6mxh")
 nodes/ToJumpBlend/position = Vector2(400, 100)
 nodes/output/position = Vector2(760, 80)
-node_connections = [&"output", 0, &"ToJumpBlend", &"IdleRunBlend", 0, &"Idle", &"IdleRunBlend", 1, &"Sprint", &"ToJumpBlend", 0, &"IdleRunBlend", &"ToJumpBlend", 1, &"Jump"]
+node_connections = [&"IdleRunBlend", 0, &"Idle", &"IdleRunBlend", 1, &"Sprint", &"ToJumpBlend", 0, &"IdleRunBlend", &"ToJumpBlend", 1, &"Jump", &"output", 0, &"ToJumpBlend"]
 
 [node name="Froggo" instance=ExtResource("1_3lsvv")]
 script = ExtResource("2_i1w7e")

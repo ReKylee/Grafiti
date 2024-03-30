@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="InputtyDisplaySet" load_steps=29 format=3 uid="uid://4hurclwntr4a"]
+
+[ext_resource type="Texture2D" uid="uid://x6gbf86p3hra" path="res://addons/inputty/Display/IconTextures/pad_stickl_left.svg" id="1_lgmpr"]
+[ext_resource type="Texture2D" uid="uid://bibdvofjwkhrm" path="res://addons/inputty/Display/IconTextures/pad_stickl_right.svg" id="2_kq6ou"]
+[ext_resource type="Texture2D" uid="uid://dhumn4ldcw6dq" path="res://addons/inputty/Display/IconTextures/pad_stickl_up.svg" id="3_r7rwt"]
+[ext_resource type="Texture2D" uid="uid://diyqh2blfyq5k" path="res://addons/inputty/Display/IconTextures/pad_stickl_down.svg" id="4_k1l0p"]
+[ext_resource type="Texture2D" uid="uid://dhw4rlfr6w135" path="res://addons/inputty/Display/IconTextures/pad_stickr_left.svg" id="5_rlvxj"]
+[ext_resource type="Texture2D" uid="uid://b6gt6q55v1o6x" path="res://addons/inputty/Display/IconTextures/pad_stickr_right.svg" id="6_wcymg"]
+[ext_resource type="Texture2D" uid="uid://cecf4xv71hj63" path="res://addons/inputty/Display/IconTextures/pad_stickr_up.svg" id="7_ld71c"]
+[ext_resource type="Texture2D" uid="uid://caitsahfr6qfp" path="res://addons/inputty/Display/IconTextures/pad_stickr_down.svg" id="8_fl104"]
+[ext_resource type="Texture2D" uid="uid://dldj02fka8b0x" path="res://addons/inputty/Display/IconTextures/ps_l2.svg" id="9_snjok"]
+[ext_resource type="Texture2D" uid="uid://k6ycrex71o5v" path="res://addons/inputty/Display/IconTextures/ps_r2.svg" id="10_uvou0"]
+[ext_resource type="Texture2D" uid="uid://cywyq8vnq4q40" path="res://addons/inputty/Display/IconTextures/ps_cross.svg" id="11_e7lt1"]
+[ext_resource type="Texture2D" uid="uid://urj2gwv03h5r" path="res://addons/inputty/Display/IconTextures/ps_circle.svg" id="12_woylf"]
+[ext_resource type="Texture2D" uid="uid://bb3cojnpkh0al" path="res://addons/inputty/Display/IconTextures/ps_square.svg" id="13_xm8bk"]
+[ext_resource type="Texture2D" uid="uid://btx82jvo2cj54" path="res://addons/inputty/Display/IconTextures/ps_triangle.svg" id="14_dj1rq"]
+[ext_resource type="Texture2D" uid="uid://rtmyvfdfr67m" path="res://addons/inputty/Display/IconTextures/ps5_share.svg" id="15_6p0ha"]
+[ext_resource type="Texture2D" uid="uid://dje33if141h2e" path="res://addons/inputty/Display/IconTextures/ps_home.svg" id="16_5gr5c"]
+[ext_resource type="Texture2D" uid="uid://chfipmef8wsu" path="res://addons/inputty/Display/IconTextures/ps5_options.svg" id="17_61y34"]
+[ext_resource type="Texture2D" uid="uid://c6xtfhaxh3onh" path="res://addons/inputty/Display/IconTextures/pad_stickl.svg" id="18_2qi51"]
+[ext_resource type="Texture2D" uid="uid://c55cluw7wnc15" path="res://addons/inputty/Display/IconTextures/pad_stickr.svg" id="19_8vuoy"]
+[ext_resource type="Texture2D" uid="uid://dbh3dyx5k1y42" path="res://addons/inputty/Display/IconTextures/ps_l1.svg" id="20_srdp6"]
+[ext_resource type="Texture2D" uid="uid://dhej7sp5kj013" path="res://addons/inputty/Display/IconTextures/ps_r1.svg" id="21_756eh"]
+[ext_resource type="Texture2D" uid="uid://chh3rgr8vxvah" path="res://addons/inputty/Display/IconTextures/pad_dpad_up.svg" id="22_ndbcy"]
+[ext_resource type="Texture2D" uid="uid://fde40wlivduc" path="res://addons/inputty/Display/IconTextures/pad_dpad_down.svg" id="23_lwhvu"]
+[ext_resource type="Texture2D" uid="uid://clcj1ukdt54tw" path="res://addons/inputty/Display/IconTextures/pad_dpad_left.svg" id="24_hshdl"]
+[ext_resource type="Texture2D" uid="uid://gba54fqs8dqm" path="res://addons/inputty/Display/IconTextures/pad_dpad_right.svg" id="25_akhui"]
+[ext_resource type="Texture2D" uid="uid://ju50mh1kefp1" path="res://addons/inputty/Display/IconTextures/ps_mute.svg" id="26_vbggi"]
+[ext_resource type="Texture2D" uid="uid://dekqy3c5838tt" path="res://addons/inputty/Display/IconTextures/ps5_touchpad.svg" id="27_ik486"]
+[ext_resource type="Script" path="res://addons/inputty/Display/InputtyDisplaySet.gd" id="28_yo6jt"]
+
+[resource]
+script = ExtResource("28_yo6jt")
+name = "PS5 Controller Icons"
+imageSet = Array[Texture]([ExtResource("11_e7lt1"), ExtResource("12_woylf"), ExtResource("13_xm8bk"), ExtResource("14_dj1rq"), ExtResource("15_6p0ha"), ExtResource("16_5gr5c"), ExtResource("17_61y34"), ExtResource("18_2qi51"), ExtResource("19_8vuoy"), ExtResource("20_srdp6"), ExtResource("21_756eh"), ExtResource("22_ndbcy"), ExtResource("23_lwhvu"), ExtResource("24_hshdl"), ExtResource("25_akhui"), ExtResource("26_vbggi"), null, null, null, null, ExtResource("27_ik486")])
+axisImageSet = Array[Texture]([ExtResource("1_lgmpr"), ExtResource("2_kq6ou"), ExtResource("3_r7rwt"), ExtResource("4_k1l0p"), ExtResource("5_rlvxj"), ExtResource("6_wcymg"), ExtResource("7_ld71c"), ExtResource("8_fl104"), null, ExtResource("9_snjok"), null, ExtResource("10_uvou0")])
+buttonNames = Array[String](["Cross", "Circle", "Square", "Triangle", "Share", "Home", "Options", "L3", "R3", "L1", "R1", "Up", "Down", "Left", "Right", "Mute", "", "", "", "", "Touchpad"])
+axisNames = Array[String](["L Left", "L Right", "L Up", "L Down", "R Left", "R Right", "R Up", "R Down", "", "L2", "", "R2"])
+nameMustContain = Array[String]([])
+nameMustNotContain = Array[String]([])
+nameContainsAny = Array[String](["ps5", "dual sense", "playstation"])

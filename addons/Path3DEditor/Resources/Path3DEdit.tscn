@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cd83xcafgqmlh"]
+[gd_scene load_steps=9 format=3 uid="uid://c0alagwfq5dts"]
 
 [ext_resource type="Script" path="res://addons/Path3DEditor/MovePanel.gd" id="1_2y6rs"]
 [ext_resource type="Texture2D" uid="uid://2t6xnphtxwl2" path="res://addons/Path3DEditor/Resources/Add.svg" id="1_eockk"]

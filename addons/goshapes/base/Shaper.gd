@@ -31,3 +31,6 @@ func get_build_job(path: PathData) -> Job:
 	if builder != null:
 		return builder.get_build_job(path)
 	return null
+
+func _init() -> void:
+	pass

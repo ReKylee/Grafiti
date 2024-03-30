@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://btj2675uk6mpv"]
+[gd_scene load_steps=4 format=3 uid="uid://sankycyc17sr"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Graffiti/GraffitiUI.gd" id="1_7yl64"]
 [ext_resource type="Texture2D" uid="uid://bisiuogdq7ikf" path="res://BlackDot.png" id="2_ynexc"]

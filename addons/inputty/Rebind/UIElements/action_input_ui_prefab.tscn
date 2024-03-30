@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d3ec4q1wgy7ib"]
+
+[node name="ActionInputUIPrefab" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 250.0
+offset_right = 600.0
+offset_bottom = 50.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 48.0
+text = "Add an Input"
+clip_text = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 302.0
+offset_right = 350.0
+offset_bottom = 48.0
+text = "X"
+clip_text = true
