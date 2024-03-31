@@ -68,9 +68,6 @@ func _ready() -> void:
 		curve = Curve3D.new()
 	if follow_remote_transform == null:
 		follow_remote_transform = RemoteTransform3D.new() as RemoteTransform3D
-		follow_remote_transform.update_position = true
-		follow_remote_transform.update_rotation = true
-		
 	if path_follow == null:
 		path_follow = PathFollow3D.new() as PathFollow3D
 		path_follow.cubic_interp = false

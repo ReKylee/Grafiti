@@ -20,15 +20,14 @@ func get_forward_direction() -> Vector3:
 	return (Vector3(v.x, 0, v.z).rotated(Vector3.UP, PI / 2).normalized())
 
 
-
 func _physics_process(delta):
 	draw_3d.clear()
 	var input_axis = Input.get_vector("move_backward", "move_forward", "move_left", "move_right")
 	var input_jump = Input.is_action_just_pressed("move_jump")
 	var input_sprint = Input.is_action_pressed("move_sprint")
-	if not grind_ability.is_actived():
-		froggo.velocity = transform.basis * velocity
-		froggo.direction = _direction
+	froggo.direction = _direction
+	froggo.velocity = velocity
+	
 	draw_3d.draw_line([Vector3.ZERO, froggo.velocity]) 
 	move(delta, input_axis, input_jump, input_sprint)
 	check_for_graffiti()

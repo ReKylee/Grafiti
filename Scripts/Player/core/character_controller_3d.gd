@@ -141,7 +141,7 @@ func setup():
 ## parameters are inputs that are sent to be handled by all abilities.
 func move(_delta: float, input_axis := Vector2.ZERO, input_jump := false, input_sprint := false ) -> void:
 	var direction = _direction_input(input_axis, _direction_base_node)
-	
+
 	
 	_check_landed()
 	if not jump_ability.is_actived() and not is_on_floor():
