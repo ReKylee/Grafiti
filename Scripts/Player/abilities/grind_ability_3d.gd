@@ -29,8 +29,10 @@ func array_translate(arr : Array, translation : Vector3) -> Array:
 func apply(velocity : Vector3, speed : float, is_on_floor : bool, direction : Vector3, _delta : float) -> Vector3:
 	draw_3d.draw_line([Vector3.ZERO, player.get_forward_direction()])
 	if velocity.length() > 1:
-		grind_speed = velocity.length() / 2
+		grind_speed = 10
 	if is_actived() and not velocity.y > 1:
+		var nearest_point = get_nearest_point()
+		draw_3d.draw_line([Vector3.ZERO, to_local(nearest_point.basis.z*2)], Color.RED)
 		current_path_follow.progress += _delta * grind_speed * grind_direction
 		return Vector3.ZERO
 	
@@ -43,12 +45,14 @@ func get_nearest_offset() -> float:
 func get_nearest_point() ->Transform3D:
 	var nearest_offset = get_nearest_offset()
 	var nearest_point = current_rail.curve.sample_baked_with_rotation(nearest_offset)
+	
 	return nearest_point
 
 func set_initial_progress() :
 	var nearest_offset = get_nearest_offset()
 	var nearest_point = get_nearest_point()
 	grind_direction = -1 if nearest_point.basis.z.dot(player.get_forward_direction()) > 0 else 1
+	
 	current_path_follow.progress = nearest_offset + grind_direction
 	
 	
@@ -57,7 +61,7 @@ func _on_actived() -> void:
 	current_path_follow = current_rail.path_follow as PathFollow3D
 	set_initial_progress()
 	current_rail.set_remote_path(player.get_path())
-	
+	player.global_rotation
 	
 func _on_deactived() -> void:
 	current_rail.set_remote_path("")

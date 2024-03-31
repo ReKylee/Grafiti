@@ -76,9 +76,7 @@ func _ready() -> void:
 		path_follow.v_offset = .5
 		path_follow.tilt_enabled = false
 		add_child(path_follow)
-		var c = CSGBox3D.new()
 		path_follow.add_child(follow_remote_transform)
-		path_follow.add_child(c)
 	if not ResourceUtils.is_local(curve):
 		curve = curve.duplicate(true)
 		

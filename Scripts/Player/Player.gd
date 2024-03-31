@@ -1,23 +1,24 @@
 extends CharacterController3D
 
+@export var camera_springarm : SpringArm3D
 @export var rail_basis : Node3D
-@onready var camera_marker = $CameraAnchor/CameraPos as Marker3D
-@onready var camera_springarm = $CameraAnchor as SpringArm3D
 @onready var graffiti_area = $InteractionArea as Area3D
 @onready var draw_3d = $Draw3D as Draw3D
 @onready var froggo: FrogAnimationController = $Froggo
 
+var has_jumped : bool
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	$CameraRemote.remote_path = camera_springarm.get_path()
 	setup()
 	_direction_base_node = camera_springarm
 	GameEvents.graffiti_ended.connect(graffiti_ended)
 
 
 func get_forward_direction() -> Vector3:
-	var v = froggo.global_transform.basis.z as Vector3
-	return (Vector3(v.x, 0, v.z).rotated(Vector3.UP, PI / 2).normalized())
+	
+	return Vector3.FORWARD
 
 
 func _physics_process(delta):
@@ -25,10 +26,16 @@ func _physics_process(delta):
 	var input_axis = Input.get_vector("move_backward", "move_forward", "move_left", "move_right")
 	var input_jump = Input.is_action_just_pressed("move_jump")
 	var input_sprint = Input.is_action_pressed("move_sprint")
-	froggo.direction = _direction
-	froggo.velocity = velocity
 	
-	draw_3d.draw_line([Vector3.ZERO, froggo.velocity]) 
+	if not grind_ability.is_actived():
+		froggo.direction = _direction
+		froggo._velocity = velocity
+		
+		if _direction:
+			global_rotation.y = lerp_angle(global_rotation.y, Vector3.FORWARD.signed_angle_to(velocity, Vector3.UP), 12 * delta)
+	
+	
+
 	move(delta, input_axis, input_jump, input_sprint)
 	check_for_graffiti()
 

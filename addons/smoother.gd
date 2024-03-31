@@ -168,7 +168,8 @@ func _physics_process(_delta: float) -> void:
 		process_priority = parent.process_priority - 1
 
 	# update the relevant nodes once per _physics_process
-	_physics_process_nodes = _get_physics_process_nodes(parent, !smooth_parent)
+	if Engine.get_frames_per_second() > 60:
+		_physics_process_nodes = _get_physics_process_nodes(parent, !smooth_parent)
 
 	# clean up _properties
 	for key in _properties.keys():

@@ -129,12 +129,19 @@ var _last_is_on_floor := false
 var _default_height : float
 
 
+
 ## Loads all character controller skills and sets necessary variables
 func setup():
 	_abilities = _load_nodes(abilities_path)
 	_default_height = collision.shape.height
 	_connect_signals()
 	_start_variables()
+	
+func align_with_y(xform, new_y):
+	xform.basis.y = new_y
+	xform.basis.x = -xform.basis.z.cross(new_y)
+	xform.basis = xform.basis.orthonormalized()
+	return xform
 
 
 ## Moves the character controller.
@@ -210,6 +217,7 @@ func _start_variables():
 
 func _check_landed():
 	if is_on_floor() and not _last_is_on_floor:
+		global_transform = align_with_y(global_transform, get_floor_normal())
 		emit_signal("landed")
 		_reset_step()
 	_last_is_on_floor = is_on_floor()
@@ -238,6 +246,7 @@ func _direction_input(input : Vector2, aim_node : Node3D) -> Vector3:
 func _step(is_on_floor:bool) -> bool:
 	_reset_step()
 	if(is_on_floor):
+		
 		emit_signal("stepped")
 		return true
 	return false
@@ -255,6 +264,7 @@ func _on_sprinted():
 	emit_signal("sprinted")
 
 func _on_jumped():
+	
 	emit_signal("jumped")
 
 func _on_grind_start():
