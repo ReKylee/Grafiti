@@ -14,11 +14,14 @@ func _ready():
 	setup()
 	_direction_base_node = camera_springarm
 	GameEvents.graffiti_ended.connect(graffiti_ended)
+	rail_basis.top_level = true
 
-
-func get_forward_direction() -> Vector3:
+func get_local_forward() -> Vector3:
+	return -basis.z
 	
-	return Vector3.FORWARD
+func get_global_forward() -> Vector3:
+	return -global_basis.z
+
 
 
 func _physics_process(delta):

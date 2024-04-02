@@ -34,6 +34,7 @@ func _on_player_landed():
 
 
 func _on_grind_actived():
+	rotation.z = 0
 	var tween = create_tween()
 	tween.tween_property(anim_tree, "parameters/SkateRunJumpBlend/blend_amount", -1, .1).set_ease(Tween.EASE_IN)
 	grinding = true

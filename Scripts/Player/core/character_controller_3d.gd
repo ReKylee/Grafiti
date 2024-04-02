@@ -159,6 +159,7 @@ func move(_delta: float, input_axis := Vector2.ZERO, input_jump := false, input_
 	 
 	sprint_ability.set_active(not grind_ability.is_actived() and input_sprint and is_on_floor() and  input_axis.x >= 0.5)
 	walk_ability.set_active(not grind_ability.is_actived())
+	
 	var multiplier = 1.0
 	for ability in _abilities:
 		multiplier *= ability.get_speed_modifier()
@@ -166,6 +167,10 @@ func move(_delta: float, input_axis := Vector2.ZERO, input_jump := false, input_
 	
 	for ability in _abilities:
 		velocity = ability.apply(velocity, speed, is_on_floor(), direction, _delta)
+	
+	# Add momentum from grinding when jumping off rail
+	if jump_ability.is_actived() and grind_ability.is_actived():
+		velocity += grind_ability.grind_speed * Vector3(direction.x, 0.1, direction.z)
 	
 	move_and_slide()
 	_horizontal_velocity = Vector3(velocity.x, 0.0, velocity.z)
@@ -216,7 +221,7 @@ func _start_variables():
 
 
 func _check_landed():
-	if is_on_floor() and not _last_is_on_floor:
+	if is_on_floor() and not _last_is_on_floor and not grind_ability.is_actived():
 		global_transform = align_with_y(global_transform, get_floor_normal())
 		emit_signal("landed")
 		_reset_step()

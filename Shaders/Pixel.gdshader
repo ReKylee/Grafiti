@@ -27,6 +27,9 @@ void vertex() {
 	POSITION = vec4(VERTEX, 1.0);
 }
 
+
+
+
 void fragment() {
 	float depth = get_depth(SCREEN_UV, INV_PROJECTION_MATRIX);
 	vec3 normal = texture(normal_texture, SCREEN_UV).xyz * 2.0 - 1.0;

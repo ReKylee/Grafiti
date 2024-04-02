@@ -1,13 +1,27 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://c13yl48vea8tr"]
 
-[ext_resource type="Shader" path="res://Shaders/FrogToon.gdshader" id="1_n0om4"]
+[ext_resource type="Shader" path="res://addons/flexible_toon_shader/flexible_toon.gdshader" id="1_4nxmi"]
 [ext_resource type="Texture2D" uid="uid://dh1cwsgbuhx4m" path="res://Assets/Player/Image_0.png" id="2_aym1o"]
 
 [resource]
 render_priority = 0
-shader = ExtResource("1_n0om4")
+shader = ExtResource("1_4nxmi")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/clamp_diffuse_to_max = false
+shader_parameter/cuts = 3
+shader_parameter/wrap = 0.0
+shader_parameter/steepness = 1.0
+shader_parameter/use_attenuation = true
+shader_parameter/use_specular = true
+shader_parameter/specular_strength = 1.0
+shader_parameter/specular_shininess = 16.0
+shader_parameter/use_rim = true
+shader_parameter/rim_width = 9.508
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/use_ramp = false
+shader_parameter/use_borders = false
+shader_parameter/border_width = 0.01
 shader_parameter/affine_mapping = false
-shader_parameter/alpha_scissor = 0.5
 shader_parameter/jitter = 0.25
-shader_parameter/resolution = Vector2i(960, 720)
-shader_parameter/albedo = ExtResource("2_aym1o")
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/albedo_texture = ExtResource("2_aym1o")
